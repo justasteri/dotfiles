@@ -8,16 +8,16 @@
 
 > All fonts are from [NERD fonts](https://www.nerdfonts.com/)
 
-UbuntuMono: UbuntuMono Nerd Font
-Mononoki: mononoki Nerd Font
-Agave: agave Nerd Font
-Caskaydia: Caskaydia Cove Nerd Font
-Hurmit: Hurmit Nerd Font Mono
-DaddyTime: DaddyTimeMono Nerd Font
-Iosevka: Iosevka NFCancel changes
-Hack: Hack NF
-SpaceMono: SpaceMono NF
-JetBrains:
+- UbuntuMono: UbuntuMono Nerd Font
+- Mononoki: mononoki Nerd Font
+- Agave: agave Nerd Font
+- Caskaydia: Caskaydia Cove Nerd Font
+- Hurmit: Hurmit Nerd Font Mono
+- DaddyTime: DaddyTimeMono Nerd Font
+- Iosevka: Iosevka NFCancel changes
+- Hack: Hack NF
+- SpaceMono: SpaceMono NF
+- JetBrains:
 
 ## Instructions
 
