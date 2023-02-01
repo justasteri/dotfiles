@@ -13,6 +13,7 @@ sudo pacman-mirrors -g &&
 sudo pacman -Syyu && 
 xargs -a packages.txt sudo pacman -S && 
 xargs -a yay_packages.txt yay -S && 
+xargs -a pip_packages.txt pip -S && 
 sh manual_installation.sh && 
 sh ~/dotfiles/.installation/make-symlinks.sh && 
 sudo pacman -Rsn $(pacman -Qdtq) && 
