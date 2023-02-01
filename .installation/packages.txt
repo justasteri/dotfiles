@@ -21,3 +21,4 @@ qutebrowser
 git 
 brightnessctl 
 patch 
+bat 
