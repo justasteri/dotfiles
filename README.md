@@ -22,22 +22,22 @@ JetBrains:
 ## Instructions
 
 1. Install all the software.
-  1. Open a terminal and go to folder `.installation`.
-  2. Execute `sh installation.sh` in a terminal.
+    1. Open a terminal and go to folder `.installation`.
+    2. Execute `sh installation.sh` in a terminal.
 2. Fix the clock. 
-  1. Open `manjaro-settings-manager`
-  2. Select `Time and Date`
-  3. Check `Set time and date automatically` and `Hardware clock in local time zone`
+    1. Open `manjaro-settings-manager`
+    2. Select `Time and Date`
+    3. Check `Set time and date automatically` and `Hardware clock in local time zone`
 3. Change terminal to `Alacritty`
-  1. Open `manjaro-settings`
-  2. Open `default applications`
-  3. Change the terminal to `Alacritty`
+    1. Open `manjaro-settings`
+    2. Open `default applications`
+    3. Change the terminal to `Alacritty`
 4. Add shortcut for `Alacritty`
-  - `Mod + Enter`
+    - `Mod + Enter`
 5. Install `neovim` plugins
-  1. Open `neovim` in a terminal
-  2. Write `:PlugInstall`
-  3. Write `:source %`
+    1. Open `neovim` in a terminal
+    2. Write `:PlugInstall`
+    3. Write `:source %`
 6. Install snap and flatpak packages
     - `sudo flatpak install logseq`
     - Download snap package for obsidian
