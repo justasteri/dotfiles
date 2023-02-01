@@ -1,4 +1,3 @@
-visual-studio-code-bin 
-pycritty 
+visual-studio-code-bin  
 libxcrypt-compat 
 microsoft-edge-stable-bin 
