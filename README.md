@@ -14,7 +14,7 @@ Agave: agave Nerd Font
 Caskaydia: Caskaydia Cove Nerd Font
 Hurmit: Hurmit Nerd Font Mono
 DaddyTime: DaddyTimeMono Nerd Font
-Iosevka: Iosevka NF
+Iosevka: Iosevka NFCancel changes
 Hack: Hack NF
 SpaceMono: SpaceMono NF
 JetBrains:
@@ -22,8 +22,8 @@ JetBrains:
 ## Instructions
 
 1. Install all the software.
-  - Open a terminal and go to folder `.installation`.
-  - Execute `sh installation.sh` in a terminal.
+  1. Open a terminal and go to folder `.installation`.
+  2. Execute `sh installation.sh` in a terminal.
 2. Fix the clock. 
   1. Open `manjaro-settings-manager`
   2. Select `Time and Date`
