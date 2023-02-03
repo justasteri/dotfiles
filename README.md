@@ -43,7 +43,6 @@
         - Download snap package for obsidian
         - `sudo snap install --dangerous --classic path_of_file`
     - PCloud
-        - 
     - 
 7, Enable "click" from touchpad.
 
