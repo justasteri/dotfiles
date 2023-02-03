@@ -38,9 +38,14 @@
     1. Open `neovim` in a terminal
     2. Write `:PlugInstall`
     3. Write `:source %`
-6. Install snap and flatpak packages
+6. Install snap and flatpak packages`
     - `sudo flatpak install logseq`
     - Download snap package for obsidian
+7, Enable "click" from touchpad
+    - Go to `settings`
+    - Go to `mouse settings`
+    - Click in `touchpad`
+    - Enable `click with touchpad`
 
 ## Software
 - Window Manager: [qtile](https://wiki.archlinux.org/title/Qtile)
