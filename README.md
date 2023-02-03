@@ -38,9 +38,12 @@
     1. Open `neovim` in a terminal
     2. Write `:PlugInstall`
     3. Write `:source %`
-6. Install snap and flatpak packages
-    - `sudo flatpak install logseq`
-    - Download snap package for obsidian
+6. Install Manual packages
+    - OBSIDIAN
+        - Download snap package for obsidian
+        - `sudo snap install --dangerous --classic path_of_file`
+    - PCloud
+        - 
     - 
 7, Enable "click" from touchpad.
 
@@ -73,4 +76,6 @@
 - neofetch: https://github.com/dylanaraps/neofetch
 - oh-my-tmux: https://github.com/gpakosz/.tmux
 - qbittorrent: https://www.qbittorrent.org/
-- qutebrowser: 
+- qutebrowser: https://www.qutebrowser.org/
+- obsidian: https://obsidian.md/
+- pcloud: https://www.pcloud.com/es/
