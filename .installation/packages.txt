@@ -10,7 +10,7 @@ rofi
 tmux 
 mpv 
 exa 
-htop 
+btop 
 neofetch 
 qbittorrent 
 tree 
