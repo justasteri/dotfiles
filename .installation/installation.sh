@@ -16,5 +16,5 @@ xargs -a yay_packages.txt yay -S &&
 # sh ~/dotfiles/.installation/make-symlinks.sh && 
 sudo ln -s /var/lib/snapd/snap /snap && 
 sudo pacman -Rsn $(pacman -Qdtq) && 
-fish && 
-sh manual_installation.sh
+sh manual_installation.sh && 
+fish
