@@ -20,8 +20,8 @@ curl -sS https://starship.rs/install.sh | sh
 pip3 install neovim
 pip3 install --user pylint
 
-# Neovim plugin manager
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+# NvChad
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
 
 # Espanso
 mkdir -p ~/opt
