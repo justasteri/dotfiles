@@ -1,17 +1,7 @@
 #/bin/bash
 
-cd ~/Downloads
-mkdir repos
-cd repos
-
 # Oh-my-fish
-curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install
-
-# Oh-my-tmux
-cd
-git clone https://github.com/gpakosz/.tmux.git
-ln -s -f .tmux/.tmux.conf
-cp .tmux/.tmux.conf.local .
+curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
 
 # Starship
 curl -sS https://starship.rs/install.sh | sh
@@ -24,22 +14,22 @@ pip3 install --user pylint
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
 
 # Espanso
-mkdir -p ~/opt
-wget -O ~/opt/Espanso.AppImage 'https://github.com/federico-terzi/espanso/releases/download/v2.1.6-beta/Espanso-X11.AppImage'
-chmod u+x ~/opt/Espanso.AppImage
-sudo ~/opt/Espanso.AppImage env-path register
-espanso service register
-espanso start
+# mkdir -p ~/opt
+# wget -O ~/opt/Espanso.AppImage 'https://github.com/federico-terzi/espanso/releases/download/v2.1.6-beta/Espanso-X11.AppImage'
+# chmod u+x ~/opt/Espanso.AppImage
+# sudo ~/opt/Espanso.AppImage env-path register
+# espanso service register
+# espanso start
 
 # Rofi
-cd ~/Downloads/repos
-git clone --depth=1 https://github.com/adi1090x/rofi.git
-cd rofi
-chmod +x setup.sh
-./setup.sh
+# cd ~/Downloads/repos
+# git clone --depth=1 https://github.com/adi1090x/rofi.git
+# cd rofi
+# chmod +x setup.sh
+# ./setup.sh
 ## Delete repo
-cd ..
-rm -rf rofi/
+# cd ..
+# rm -rf rofi/
 
 # FZF
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
