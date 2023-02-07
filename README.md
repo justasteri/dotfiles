@@ -47,7 +47,7 @@ My Dotfiles for Linux
 | Code editor | VScode | https://code.visualstudio.com/ |
 | Text expander | Espanso | https://espanso.org/ | 
 | Vim browser | qutebrowser | https://qutebrowser.org/ |
-| Browser | microsoft-edge |  |
+| Browser | firefox |  |
 | Media player | mpv |  |
 | Torrent downloader | qbittorrent | https://www.qbittorrent.org/ |
 
