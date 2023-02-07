@@ -6,7 +6,7 @@ My Dotfiles for Linux
 ## Information
 
 - Distribution: Arch-based Distro
-- Desktop Environment: Gnome
+- Desktop Environment:
 ## Fonts
 
 - **UbuntuMono**: UbuntuMono Nerd Font
