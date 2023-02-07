@@ -62,6 +62,7 @@ My Dotfiles for Linux
 | super + m | App launcher
 | super + e | File Explorer
 | super + o | Note-taking App
+| super + v | NeoVim
 
 ## Installation
 
