@@ -73,3 +73,4 @@ Install my dotfiles
 #### Obsidian
 1. Download snap package from website
 2. `sudo snap install --dangerous --classic path_of_file`
+3. Logout and login again
