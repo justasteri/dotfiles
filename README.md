@@ -67,3 +67,9 @@ My Dotfiles for Linux
 ## Installation
 
 Install my dotfiles
+
+### Further instructions for manual installations
+
+#### Obsidian
+1. Download snap package from website
+2. `sudo snap install --dangerous --classic path_of_file`
