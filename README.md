@@ -19,6 +19,7 @@ My Dotfiles for Linux
 - **Hack**: Hack NF
 - **SpaceMono**: SpaceMono NF
 - **JetBrains**:
+
 ## Terminal Packages
 
 | Use | Package |
@@ -50,6 +51,13 @@ My Dotfiles for Linux
 | Browser | firefox |  |
 | Media player | mpv |  |
 | Torrent downloader | qbittorrent | https://www.qbittorrent.org/ |
+
+### Other apps
+
+| Use | App |
+| --- | --- |
+| Server | [xampp](https://www.apachefriends.org/es/index.html)
+| Arduino IDE | [arduino_ide](https://www.arduino.cc/en/software/)
 
 ## Shortcuts
 
