@@ -109,11 +109,12 @@ My Dotfiles for Linux
 1. Web browser
 2. Code editor
 3. Terminal
-4. File explorer
-5. Music
-6. Media
-7. Note-taking app
-8. Others
+4. Git
+5. File explorer
+6. Music
+7. Media
+8. Note-taking app
+9. Others
 
 ## Installation
 
