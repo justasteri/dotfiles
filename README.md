@@ -65,6 +65,7 @@ My Dotfiles for Linux
 | Terminal information display | [neofetch](https://github.com/dylanaraps/neofetch)
 | Search tool | [ripgrep](https://github.com/BurntSushi/ripgrep)
 | fuzzy-finder | [fzf](https://github.com/junegunn/fzf) |
+| spotify client | https://spotifyd.github.io/spotifyd/
 
 ### Development packages
 
