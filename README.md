@@ -91,6 +91,16 @@ My Dotfiles for Linux
 | super + o | Note-taking App
 | super + v | NeoVim
 
+## Workspaces Layout
+1. Web browser
+2. Code editor
+3. Terminal
+4. File explorer
+5. Music
+6. Media
+7. Note-taking app
+8. Others
+
 ## Installation
 
 Install my dotfiles
