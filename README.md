@@ -66,6 +66,7 @@ My Dotfiles for Linux
 | Browser | [firefox](https://www.mozilla.org/es-MX/firefox/new/) |
 | Media player | [mpv](https://mpv.io/) |
 | Torrent downloader | [qbittorrent](https://www.qbittorrent.org/)
+| Music | [Spotify](https://open.spotify.com/)
 
 ### Other apps
 
