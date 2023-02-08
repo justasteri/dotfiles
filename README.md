@@ -14,12 +14,13 @@ My Dotfiles for Linux
 7. [Shortcuts](https://github.com/JustAsteri/dotfiles#shortcuts)
 8. [Workspaces layout](https://github.com/JustAsteri/dotfiles#workspaces-layout)
 9. [Installation](https://github.com/JustAsteri/dotfiles#installation)
-    1. [Further instructions for manual installations](https://github.com/JustAsteri/dotfiles#further-instructions-for-manual-installations)
+    1. [GNOME Configs](https://github.com/JustAsteri/dotfiles#gnome-configs)
+    2. [Further instructions for manual installations](https://github.com/JustAsteri/dotfiles#further-instructions-for-manual-installations)
 
 ## Information
 
-- Distribution: Arch-based Distro
-- Desktop Environment:
+- Distribution: MAnjaro
+- Desktop Environment: GNOME
 
 ## Fonts
 
@@ -32,7 +33,7 @@ My Dotfiles for Linux
 - **Iosevka**: Iosevka NFCancel changes
 - **Hack**: Hack NF
 - **SpaceMono**: SpaceMono NF
-- **JetBrains**:
+- **JetBrains**: 
 
 ## Terminal Apps
 
@@ -46,6 +47,7 @@ My Dotfiles for Linux
 | disk usage analyzer | [go DiskUsage()](https://github.com/dundee/gdu) |
 | graphical process/system monitor | [bottom](https://github.com/ClementTsang/bottom)
 | Terminal UI for git | [lazy-git](https://github.com/jesseduffield/lazygit)
+| Spotify TUI | [spotify-tui](https://github.com/Rigellute/spotify-tui)
 
 ### Useful packages
 
@@ -91,6 +93,7 @@ My Dotfiles for Linux
 
 ## IDE
 - [AstroVim](https://astronvim.github.io/)
+- VScode
 
 ## Shortcuts
 
@@ -119,6 +122,8 @@ My Dotfiles for Linux
 ## Installation
 
 Install my dotfiles
+
+### GNOME Configs
 
 ### Further instructions for manual installations
 
