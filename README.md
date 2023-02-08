@@ -2,11 +2,25 @@
 
 My Dotfiles for Linux
 
+## Table of Contents
+1. [Information](https://github.com/JustAsteri/dotfiles/edit/master/README.md#information)
+2. [Fonts](https://github.com/JustAsteri/dotfiles/edit/master/README.md#fonts)
+3. [Terminal Apps](https://github.com/JustAsteri/dotfiles/edit/master/README.md#terminal-apps)
+    1. [Useful Packages](https://github.com/JustAsteri/dotfiles/edit/master/README.md#useful-packages)
+    2. [Development packages](https://github.com/JustAsteri/dotfiles/edit/master/README.md#development-packages)
+4. [Apps](https://github.com/JustAsteri/dotfiles/edit/master/README.md#apps)
+    1. [Other Apps](https://github.com/JustAsteri/dotfiles/edit/master/README.md#other-apps)
+6. [IDE](https://github.com/JustAsteri/dotfiles/edit/master/README.md#ide)
+7. [Shortcuts](https://github.com/JustAsteri/dotfiles/edit/master/README.md#shortcuts)
+8. [Workspaces layout](https://github.com/JustAsteri/dotfiles/edit/master/README.md#workspaces-layout)
+9. [Installation](https://github.com/JustAsteri/dotfiles/edit/master/README.md#installation)
+    1. [Further instructions for manual installations](https://github.com/JustAsteri/dotfiles/edit/master/README.md#further-instructions-for-manual-installations)
 
 ## Information
 
 - Distribution: Arch-based Distro
 - Desktop Environment:
+
 ## Fonts
 
 - **UbuntuMono**: UbuntuMono Nerd Font
@@ -75,7 +89,7 @@ My Dotfiles for Linux
 | Server | [xampp](https://www.apachefriends.org/es/index.html)
 | Arduino IDE | [arduino_ide](https://www.arduino.cc/en/software/)
 
-## Neovim IDE
+## IDE
 - [AstroVim](https://astronvim.github.io/)
 
 ## Shortcuts
