@@ -4,11 +4,12 @@ My Dotfiles for Linux
 
 ## Table of Contents
 1. [Information](https://github.com/JustAsteri/dotfiles#information)
-2. [Fonts](https://github.com/JustAsteri/dotfiles#fonts)
-3. [Terminal Apps](https://github.com/JustAsteri/dotfiles#terminal-apps)
+2. [Screenshots](https://github.com/JustAsteri/dotfiles#screenshots)
+3. [Fonts](https://github.com/JustAsteri/dotfiles#fonts)
+4. [Terminal Apps](https://github.com/JustAsteri/dotfiles#terminal-apps)
     1. [Useful Packages](https://github.com/JustAsteri/dotfiles#useful-packages)
     2. [Development packages](https://github.com/JustAsteri/dotfiles#development-packages)
-4. [Apps](https://github.com/JustAsteri/dotfiles#apps)
+5. [Apps](https://github.com/JustAsteri/dotfiles#apps)
     1. [Other Apps](https://github.com/JustAsteri/dotfiles#other-apps)
 6. [IDE](https://github.com/JustAsteri/dotfiles#ide)
 7. [Shortcuts](https://github.com/JustAsteri/dotfiles#shortcuts)
@@ -21,6 +22,8 @@ My Dotfiles for Linux
 
 - Distribution: MAnjaro
 - Desktop Environment: GNOME
+
+## Screenshots
 
 ## Fonts
 
@@ -123,7 +126,10 @@ My Dotfiles for Linux
 
 Install my dotfiles
 
-### GNOME Configs
+### GNOME
+| Use | App |
+| --- | --- |
+| Dynamic wallpapers| https://github.com/manishprivet/dynamic-gnome-wallpapers
 
 ### Further instructions for manual installations
 
