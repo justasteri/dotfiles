@@ -62,10 +62,11 @@ My Dotfiles for Linux
 | Shell plugin manager | [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish) |
 | `ls` alternative | [exa](https://the.exa.website/) |
 | `cat` alternative | [bat](https://github.com/sharkdp/bat) |
-| Terminal information display | [neofetch](https://github.com/dylanaraps/neofetch)
+| Terminal information display | [nitch](https://github.com/unxsh/nitch)
 | Search tool | [ripgrep](https://github.com/BurntSushi/ripgrep)
 | fuzzy-finder | [fzf](https://github.com/junegunn/fzf) |
-| spotify client | https://spotifyd.github.io/spotifyd/
+| spotify client | [spotifyd](https://spotifyd.github.io/spotifyd/)
+| audio visualizer | [cava](https://github.com/karlstav/cava)
 
 ### Development packages
 
