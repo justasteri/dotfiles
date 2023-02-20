@@ -42,7 +42,6 @@ My Dotfiles for Linux
 
 | Use | Package |
 | --- | ------- |
-| Terminal emulator | alacritty |
 | File manager | [ranger](https://github.com/ranger/ranger) |
 | Text editor | [neovim](https://neovim.io/) |
 | Terminal multiplexer | [tmux](https://github.com/tmux/tmux) |
@@ -79,6 +78,7 @@ My Dotfiles for Linux
 
 | Use | App |
 | --- | --- |
+| Terminal emulator | alacritty |
 | Note-taking | [Obsidian](https://obsidian.md/)
 | Cloud storage | [Pcloud](https://www.pcloud.com/es/) |
 | Code editor | [VScode](https://code.visualstudio.com/)
