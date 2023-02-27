@@ -15,13 +15,11 @@ My Dotfiles for Linux
 7. [Shortcuts](https://github.com/JustAsteri/dotfiles#shortcuts)
 8. [Workspaces layout](https://github.com/JustAsteri/dotfiles#workspaces-layout)
 9. [Installation](https://github.com/JustAsteri/dotfiles#installation)
-    1. [GNOME Configs](https://github.com/JustAsteri/dotfiles#gnome-configs)
-    2. [Further instructions for manual installations](https://github.com/JustAsteri/dotfiles#further-instructions-for-manual-installations)
 
 ## Information
 
-- Distribution: MAnjaro
-- Desktop Environment: GNOME
+- Distribution: Manjaro
+- Desktop Environment: Plasma/KDE
 
 ## Screenshots
 
@@ -127,11 +125,6 @@ My Dotfiles for Linux
 ## Installation
 
 Install my dotfiles
-
-### GNOME
-| Use | App |
-| --- | --- |
-| Dynamic wallpapers| https://github.com/manishprivet/dynamic-gnome-wallpapers
 
 ### Further instructions for manual installations
 
