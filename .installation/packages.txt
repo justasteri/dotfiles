@@ -11,7 +11,6 @@ tmux
 mpv 
 exa 
 btop 
-nitch 
 qbittorrent 
 tree 
 make 
