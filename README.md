@@ -77,7 +77,7 @@ My Dotfiles for Linux
 | Use | App |
 | --- | --- |
 | Terminal emulator | alacritty |
-| Note-taking | [Obsidian](https://obsidian.md/)
+| Note-taking | [LogSeq](https://logseq.com/)
 | Cloud storage | [Pcloud](https://www.pcloud.com/es/) |
 | Code editor | [VScode](https://code.visualstudio.com/)
 | Text expander | [Espanso](https://espanso.org/)
@@ -108,7 +108,7 @@ My Dotfiles for Linux
 | super + c | Code Editor
 | super + m | App launcher
 | super + e | File Explorer
-| super + o | Note-taking App
+| super + n | Note-taking App
 | super + v | NeoVim
 
 ## Workspaces Layout
