@@ -11,7 +11,7 @@ tmux
 mpv 
 exa 
 btop 
-neofetch 
+nitch 
 qbittorrent 
 tree 
 make 
@@ -21,3 +21,6 @@ git
 brightnessctl 
 patch 
 bat 
+bottom 
+nodejs 
+npm 
