@@ -126,9 +126,16 @@ My Dotfiles for Linux
 
 Install my dotfiles
 
-### Further instructions for manual installations
-
-#### Obsidian
-1. Download snap package from website
-2. `sudo snap install --dangerous --classic path_of_file`
-3. Logout and login again
+1. Execute the `.installation` script.
+2. Install all the manual apps
+    1. Xampp
+    2. pcloud
+    3. spotify
+    4. logseq
+    5. nvchad
+3. Configure `ssh` for git and github
+    1. `ssh-keygen -t rsa -b 4096 -C “tu_email@gmail.com”`
+    2. `eval ssh-agent -s`
+    3. `ssh-add ~/.ssh/id_rsa`
+    4. Add public key to github
+4. Logout and login with the wayland session

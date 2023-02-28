@@ -10,17 +10,6 @@ curl -sS https://starship.rs/install.sh | sh
 pip3 install neovim
 pip3 install --user pylint
 
-# NvChad
-git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
-
-# Espanso
-# mkdir -p ~/opt
-# wget -O ~/opt/Espanso.AppImage 'https://github.com/federico-terzi/espanso/releases/download/v2.1.6-beta/Espanso-X11.AppImage'
-# chmod u+x ~/opt/Espanso.AppImage
-# sudo ~/opt/Espanso.AppImage env-path register
-# espanso service register
-# espanso start
-
 # Rofi
 # cd ~/Downloads/repos
 # git clone --depth=1 https://github.com/adi1090x/rofi.git
