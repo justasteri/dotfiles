@@ -17,3 +17,4 @@ patch
 bat 
 nodejs 
 npm 
+kitty 
