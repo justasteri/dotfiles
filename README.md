@@ -18,8 +18,8 @@ My Dotfiles for Linux
 
 ## Information
 
-- Distribution: Manjaro
-- Desktop Environment: Plasma/KDE
+- Distribution: ZorinOS
+- Desktop Environment: 
 
 ## Screenshots
 
@@ -54,7 +54,6 @@ My Dotfiles for Linux
 | Use | Package |
 | --- | ------- |
 | Shell | [fish](https://fishshell.com/) |
-| terminal configurator | pycritty |
 | Terminal prompt | [stastarrhip-prompt](https://starship.rs/) |
 | Shell plugin manager | [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish) |
 | `ls` alternative | [exa](https://the.exa.website/) |
