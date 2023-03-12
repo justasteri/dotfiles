@@ -19,9 +19,6 @@ My Dotfiles for Linux
 ## Information
 
 - Distribution: ZorinOS
-- Desktop Environment: 
-
-## Screenshots
 
 ## Fonts
 
@@ -39,7 +36,6 @@ My Dotfiles for Linux
 | Text editor | [neovim](https://neovim.io/) |
 | Terminal multiplexer | [tmux](https://github.com/tmux/tmux) |
 | Terminal system monitor | [htop](https://github.com/hishamhm/htop) |
-| disk usage analyzer | [go DiskUsage()](https://github.com/dundee/gdu) |
 | Terminal UI for git | [lazy-git](https://github.com/jesseduffield/lazygit)
 | Spotify TUI | [spotify-tui](https://github.com/Rigellute/spotify-tui)
 
@@ -50,13 +46,12 @@ My Dotfiles for Linux
 | Shell | [zsh]() |
 | Terminal prompt | [stastarrhip-prompt](https://starship.rs/) |
 | Shell plugin manager | [oh-my-zsh]() |
-| `ls` alternative | [exa](https://the.exa.website/) |
+| `ls` alternative | [lsd](https://github.com/Peltoche/lsd) |
 | `cat` alternative | [bat](https://github.com/sharkdp/bat) |
-| Terminal information display | [nitch](https://github.com/unxsh/nitch)
-| Search tool | [ripgrep](https://github.com/BurntSushi/ripgrep)
+| Terminal information display | neofetch
 | fuzzy-finder | [fzf](https://github.com/junegunn/fzf) |
 | spotify client | [spotifyd](https://spotifyd.github.io/spotifyd/)
-| audio visualizer | [cava](https://github.com/karlstav/cava)
+| app launcher | [ulauncher](https://ulauncher.io/)
 
 ### Development packages
 
@@ -64,12 +59,13 @@ My Dotfiles for Linux
 - npm
 - python/python3
 - pip/pip3
+- nvm
 
 ## Apps
 
 | Use | App |
 | --- | --- |
-| Terminal emulator | alacritty |
+| Terminal emulator | kitty |
 | Note-taking | 
 | Cloud storage | [Pcloud](https://www.pcloud.com/es/) 
 | Code editor | [VScode](https://code.visualstudio.com/)
@@ -86,10 +82,6 @@ My Dotfiles for Linux
 | Server | [xampp](https://www.apachefriends.org/es/index.html)
 | Arduino IDE | [arduino_ide](https://www.arduino.cc/en/software/)
 
-## IDE
-- [AstroVim](https://astronvim.github.io/)
-- VScode
-
 ## Shortcuts
 
 | Keys | App |
@@ -101,7 +93,6 @@ My Dotfiles for Linux
 | super + m | App launcher
 | super + e | File Explorer
 | super + n | Note-taking App
-| super + v | NeoVim
 
 ## Workspaces Layout
 1. Web browser
@@ -123,11 +114,8 @@ Install my dotfiles
     1. Xampp
     2. pcloud
     3. spotify
-    4. logseq
-    5. nvchad
 3. Configure `ssh` for git and github
     1. `ssh-keygen -t rsa -b 4096 -C “tu_email@gmail.com”`
     2. `eval ssh-agent -s`
     3. `ssh-add ~/.ssh/id_rsa`
     4. Add public key to github
-4. Logout and login with the wayland session
