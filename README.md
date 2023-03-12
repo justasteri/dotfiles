@@ -25,16 +25,11 @@ My Dotfiles for Linux
 
 ## Fonts
 
-- **UbuntuMono**: UbuntuMono Nerd Font
-- **Mononoki**: Mononoki Nerd Font
-- **Agave**: agave Nerd Font
-- **Caskaydia**: Caskaydia Cove Nerd Font
-- **Hurmit**: Hurmit Nerd Font Mono
-- **DaddyTime**: DaddyTimeMono Nerd Font
-- **Iosevka**: Iosevka NFCancel changes
-- **Hack**: Hack NF
-- **SpaceMono**: SpaceMono NF
-- **JetBrains**: 
+> https://www.nerdfonts.com/font-downloads
+
+- JetBrains: https://www.jetbrains.com/lp/mono/
+- Cascadia: https://github.com/microsoft/cascadia-code
+- Fira Code: https://github.com/tonsky/FiraCode
 
 ## Terminal Apps
 
