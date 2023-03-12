@@ -43,9 +43,8 @@ My Dotfiles for Linux
 | File manager | [ranger](https://github.com/ranger/ranger) |
 | Text editor | [neovim](https://neovim.io/) |
 | Terminal multiplexer | [tmux](https://github.com/tmux/tmux) |
-| Terminal system monitor | [btop](https://github.com/aristocratos/btop) |
+| Terminal system monitor | [htop](https://github.com/hishamhm/htop) |
 | disk usage analyzer | [go DiskUsage()](https://github.com/dundee/gdu) |
-| graphical process/system monitor | [bottom](https://github.com/ClementTsang/bottom)
 | Terminal UI for git | [lazy-git](https://github.com/jesseduffield/lazygit)
 | Spotify TUI | [spotify-tui](https://github.com/Rigellute/spotify-tui)
 
@@ -53,9 +52,9 @@ My Dotfiles for Linux
 
 | Use | Package |
 | --- | ------- |
-| Shell | [fish](https://fishshell.com/) |
+| Shell | [zsh]() |
 | Terminal prompt | [stastarrhip-prompt](https://starship.rs/) |
-| Shell plugin manager | [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish) |
+| Shell plugin manager | [oh-my-zsh]() |
 | `ls` alternative | [exa](https://the.exa.website/) |
 | `cat` alternative | [bat](https://github.com/sharkdp/bat) |
 | Terminal information display | [nitch](https://github.com/unxsh/nitch)
@@ -76,13 +75,12 @@ My Dotfiles for Linux
 | Use | App |
 | --- | --- |
 | Terminal emulator | alacritty |
-| Note-taking | [LogSeq](https://logseq.com/)
-| Cloud storage | [Pcloud](https://www.pcloud.com/es/) |
+| Note-taking | 
+| Cloud storage | [Pcloud](https://www.pcloud.com/es/) 
 | Code editor | [VScode](https://code.visualstudio.com/)
-| Text expander | [Espanso](https://espanso.org/)
 | Vim browser | [qutebrowser](https://qutebrowser.org/)
-| Browser | [firefox](https://www.mozilla.org/es-MX/firefox/new/) |
-| Media player | [mpv](https://mpv.io/) |
+| Browser | [firefox](https://www.mozilla.org/es-MX/firefox/new/) 
+| Media player | [mpv](https://mpv.io/) 
 | Torrent downloader | [qbittorrent](https://www.qbittorrent.org/)
 | Music | [Spotify](https://open.spotify.com/)
 

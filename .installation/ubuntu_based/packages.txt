@@ -1,16 +1,11 @@
 python3 
-python-pip 
-yay 
-alacritty 
-fish 
+python3-pip 
 ranger 
 flameshot 
 neovim 
 rofi 
 tmux 
 mpv 
-exa 
-btop 
 qbittorrent 
 tree 
 make 
@@ -20,7 +15,5 @@ git
 brightnessctl 
 patch 
 bat 
-bottom 
 nodejs 
 npm 
-plasma-wayland-session 
