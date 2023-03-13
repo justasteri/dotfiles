@@ -18,3 +18,4 @@ bat
 nodejs 
 npm 
 kitty 
+zsh 
