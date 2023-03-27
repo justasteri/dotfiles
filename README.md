@@ -40,6 +40,10 @@ My Dotfiles for Linux
 | Terminal UI for git | [lazy-git](https://github.com/jesseduffield/lazygit)
 | Spotify TUI | [spotify-tui](https://github.com/Rigellute/spotify-tui)
 
+### Oh-My-ZSH plugins
+- [zsh-autocompletation](https://github.com/marlonrichert/zsh-autocomplete)
+- [zsh-vi-mode](https://github.com/jeffreytse/zsh-vi-mode)
+
 ### Useful packages
 
 | Use | Package |
