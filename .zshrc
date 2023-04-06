@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions)
+plugins=(themes zsh-vi-mode zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -103,6 +103,8 @@ source $ZSH/oh-my-zsh.sh
 ########### Alias ###########
 alias grep='grep --color=auto'
 alias cat='bat --style=plain --paging=never'
+alias anki='$HOME/Apps/anki-2.1.60-linux-qt6/anki'
+alias ls='lsd'
 
 ########### External Apps ###########
 
