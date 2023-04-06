@@ -99,12 +99,39 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+# On-demand rehash
+zshcache_time="$(date +%s%N)"
+
+autoload -Uz add-zsh-hook
+
+rehash_precmd() {
+  if [[ -a /var/cache/zsh/pacman ]]; then
+    local paccache_time="$(date -r /var/cache/zsh/pacman +%s%N)"
+    if (( zshcache_time < paccache_time )); then
+      rehash
+      zshcache_time="$paccache_time"
+    fi
+  fi
+}
+
+add-zsh-hook -Uz precmd rehash_precmd
 
 ########### Alias ###########
 alias grep='grep --color=auto'
 alias cat='bat --style=plain --paging=never'
 alias anki='$HOME/Apps/anki-2.1.60-linux-qt6/anki'
 alias ls='lsd'
+alias zshconfig="nvim ~/.zshrc"
+alias ohmyzsh="thunar ~/.oh-my-zsh"
+# Git
+alias gi='git init'
+alias ga='git add'
+alias gc='git commit -m'
+alias gst='git status'
+alias gco='git checkout'
+alias gbr='git branch'
+# /Git
 
 ########### External Apps ###########
 
@@ -114,3 +141,7 @@ alias ls='lsd'
 # NVM
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Starship
+eval "$(starship init zsh)"

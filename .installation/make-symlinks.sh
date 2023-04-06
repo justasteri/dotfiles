@@ -10,7 +10,7 @@
 dir=~/dotfiles
 
 # old dotfiles backup directory
-olddir=~/dotfiles/old_dotfiles
+olddir=~/old_dotfiles
 
 # list of files/folders to symlink in homedir
 files=`cat dotfiles.txt`
