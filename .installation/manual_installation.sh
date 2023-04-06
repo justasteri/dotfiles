@@ -16,3 +16,8 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
 # NVM
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# NvChad
+rm -rf ~/.config/nvim
+rm -rf ~/.local/share/nvim
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
