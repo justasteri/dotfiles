@@ -19,7 +19,7 @@ My Dotfiles for Linux
 
 ## Information
 
-- Distribution: ZorinOS
+- Distribution: Arch Based
 
 ## Fonts
 
@@ -38,7 +38,6 @@ My Dotfiles for Linux
 | Terminal multiplexer | [tmux](https://github.com/tmux/tmux) |
 | Terminal system monitor | [htop](https://github.com/hishamhm/htop) |
 | Terminal UI for git | [lazy-git](https://github.com/jesseduffield/lazygit)
-| Spotify TUI | [spotify-tui](https://github.com/Rigellute/spotify-tui)
 
 ### Oh-My-ZSH plugins
 - [zsh-autocompletation](https://github.com/marlonrichert/zsh-autocomplete)
@@ -49,13 +48,11 @@ My Dotfiles for Linux
 | Use | Package |
 | --- | ------- |
 | Shell | [zsh]() |
-| Terminal prompt | [stastarrhip-prompt](https://starship.rs/) |
 | Shell plugin manager | [oh-my-zsh]() |
 | `ls` alternative | [lsd](https://github.com/Peltoche/lsd) |
 | `cat` alternative | [bat](https://github.com/sharkdp/bat) |
-| Terminal information display | neofetch
+| Terminal information display | [neofetch]()
 | fuzzy-finder | [fzf](https://github.com/junegunn/fzf) |
-| spotify client | [spotifyd](https://spotifyd.github.io/spotifyd/)
 | app launcher | [ulauncher](https://ulauncher.io/)
 
 ### Development packages
@@ -70,15 +67,14 @@ My Dotfiles for Linux
 
 | Use | App |
 | --- | --- |
-| Terminal emulator | kitty |
-| Note-taking | 
+| Terminal emulator | [kitty]() |
+| Note-taking | [logseq]
 | Cloud storage | [Pcloud](https://www.pcloud.com/es/) 
 | Code editor | [VScode](https://code.visualstudio.com/)
 | Vim browser | [qutebrowser](https://qutebrowser.org/)
-| Browser | [firefox](https://www.mozilla.org/es-MX/firefox/new/) 
+| Browser | 
 | Media player | [mpv](https://mpv.io/) 
 | Torrent downloader | [qbittorrent](https://www.qbittorrent.org/)
-| Music | [Spotify](https://open.spotify.com/)
 
 ### Other apps
 
@@ -112,13 +108,12 @@ My Dotfiles for Linux
 
 ## Installation
 
-Install my dotfiles
+Install dotfiles
 
 1. Execute the `.installation` script.
 2. Install all the manual apps
     1. Xampp
     2. pcloud
-    3. spotify
 3. Configure `ssh` for git and github
     1. `ssh-keygen -t rsa -b 4096 -C “tu_email@gmail.com”`
     2. `eval ssh-agent -s`
