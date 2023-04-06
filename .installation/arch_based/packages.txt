@@ -23,4 +23,3 @@ bat
 bottom 
 nodejs 
 npm 
-plasma-wayland-session 
