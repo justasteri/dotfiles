@@ -3,6 +3,13 @@
 # Oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+## Oh-my-zsh plugins
+# vi-mode
+git clone https://github.com/jeffreytse/zsh-vi-mode \
+  $ZSH_CUSTOM/plugins/zsh-vi-mode
+# autocompletetion
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
 # Starship
 curl -sS https://starship.rs/install.sh | sh
 
