@@ -7,4 +7,4 @@ xargs -a packages.txt sudo apt-get install &&                                   
 sudo snap install code --classic &&                                                                                     # Install VSCode
 sh ~/dotfiles/.installation/make-symlinks.sh &&                                                                         # Make symlinks for dotfiles
 sudo apt-get autoremove &&                                                                                              # Remove unused packages
-sh manual_installation.sh                                                                                               # Install packages manually
+sh ../manual_installation.sh                                                                                               # Install packages manually
