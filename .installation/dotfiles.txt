@@ -1,1 +1,1 @@
-.bashrc .gitconfig README.md .installation .local/share/fonts .config/starship.toml .config/nvim_old .zsh
+.bashrc .gitconfig README.md .installation .local/share/fonts .config/starship.toml .config/nvim_old .zshrc
