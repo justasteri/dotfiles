@@ -8,7 +8,7 @@ neovim
 rofi 
 tmux 
 mpv 
-exa 
+lsd 
 btop 
 qbittorrent 
 tree 
