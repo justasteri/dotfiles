@@ -1,1 +1,1 @@
-.bashrc .gitconfig README.md .installation .local/share/fonts .config .zshrc
+.bashrc .gitconfig README.md .installation .local/share/fonts .zshrc .config/kitty .config/starship.toml
