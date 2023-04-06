@@ -1,8 +1,7 @@
 python3 
 python-pip 
 yay 
-alacritty 
-fish 
+kitty 
 ranger 
 flameshot 
 neovim 
