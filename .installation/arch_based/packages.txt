@@ -23,3 +23,5 @@ nodejs
 npm 
 ripgrep 
 gnome-keyring 
+exfat-utils 
+fuse-exfat 
