@@ -154,3 +154,6 @@ cd dotfiles
 git status /home/justasteri/dotfiles/
 cd $HOME
 echo "########################\n"
+
+# Z
+. /usr/share/z/z.sh

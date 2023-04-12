@@ -25,3 +25,6 @@ ripgrep
 gnome-keyring 
 exfat-utils 
 fuse-exfat 
+plasma-wayland-session 
+hyprland 
+sd 
