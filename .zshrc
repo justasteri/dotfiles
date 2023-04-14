@@ -120,7 +120,6 @@ add-zsh-hook -Uz precmd rehash_precmd
 ########### Alias ###########
 alias grep='grep --color=auto'
 alias cat='bat --style=plain --paging=never'
-#alias anki='$HOME/Apps/anki-2.1.60-linux-qt6/anki'
 alias ls='lsd'
 alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="thunar ~/.oh-my-zsh"
@@ -131,6 +130,8 @@ alias gc='git commit -m'
 alias gst='git status'
 alias gco='git checkout'
 alias gbr='git branch'
+alias gp='git push'
+alias gpl='git pull'
 # /Git
 
 ########### External Apps ###########
@@ -154,6 +155,3 @@ cd dotfiles
 git status /home/justasteri/dotfiles/
 cd $HOME
 echo "########################\n"
-
-# Z
-. /usr/share/z/z.sh
