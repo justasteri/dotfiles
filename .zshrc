@@ -146,9 +146,6 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 ########### execution ################
 
-# Starship
-eval "$(starship init zsh)"
-
 # Dotfiles repository
 echo "\n### DOTFILES UPDATES ###"
 cd dotfiles
