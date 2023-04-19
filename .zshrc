@@ -152,3 +152,6 @@ cd dotfiles
 git status /home/justasteri/dotfiles/
 cd $HOME
 echo "########################\n"
+
+# Path
+export PATH=~/bin:$PATH
