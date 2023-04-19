@@ -10,9 +10,6 @@ git clone https://github.com/jeffreytse/zsh-vi-mode \
 # autocompletetion
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
-# Starship
-curl -sS https://starship.rs/install.sh | sh
-
 # Neovim pip packages
 pip3 install neovim
 pip3 install --user pylint

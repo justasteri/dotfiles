@@ -1,0 +1,3 @@
+visual-studio-code-bin 
+libxcrypt-compat 
+nitch 
