@@ -123,7 +123,8 @@ alias cat='bat --style=plain --paging=never'
 alias ls='lsd'
 alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="thunar ~/.oh-my-zsh"
-# Git
+alias logout="sudo pkill -u justasteri"
+# <Git
 alias gi='git init'
 alias ga='git add'
 alias gc='git commit -m'
@@ -132,7 +133,12 @@ alias gco='git checkout'
 alias gbr='git branch'
 alias gp='git push'
 alias gpl='git pull'
-# /Git
+# Git/>
+# <Pacman
+alias install="sudo pacman -S "
+alias update="sudo pacman -Syyu "
+alias autoclean="sudo pacman -Rsn $(pacman -Qdtq)"
+# Pacman/>
 
 ########### External Apps ###########
 
