@@ -15,4 +15,4 @@ You can check the sub-branches of the repo for the os that you like:
 - **Linux**
   - [Arch Based Distros](https://github.com/JustAsteri/dotfiles/tree/arch_based)
   - [Ubuntu Based Distros](https://github.com/JustAsteri/dotfiles/tree/ubuntu_based)
-- [Extras](https://github.com/JustAsteri/dotfiles/tree/extras)
+- [Extras](https://github.com/JustAsteri/dotfiles/tree/extra)
