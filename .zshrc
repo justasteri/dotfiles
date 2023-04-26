@@ -124,7 +124,7 @@ alias ls='lsd'
 alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="thunar ~/.oh-my-zsh"
 alias logout="sudo pkill -u justasteri"
-# <Git
+# <Git>
 alias gi='git init'
 alias ga='git add'
 alias gc='git commit -m'
@@ -133,12 +133,12 @@ alias gco='git checkout'
 alias gbr='git branch'
 alias gp='git push'
 alias gpl='git pull'
-# Git/>
-# <Pacman
+# <Git/>
+# <Pacman>
 alias install="sudo pacman -S "
 alias update="sudo pacman -Syyu "
 alias autoclean="sudo pacman -Rsn $(pacman -Qdtq)"
-# Pacman/>
+# <Pacman/>
 
 ########### External Apps ###########
 
@@ -150,8 +150,6 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-########### execution ################
-
 # Dotfiles repository
 echo "\n### DOTFILES UPDATES ###"
 cd dotfiles
@@ -161,3 +159,11 @@ echo "########################\n"
 
 # Path
 export PATH=~/bin:$PATH
+
+# pnpm
+export PNPM_HOME="/home/justasteri/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
