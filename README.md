@@ -63,6 +63,7 @@ These are my dotfiles for different operating systems:
 - Anki
 - mpv
 - libre office
+- balena etcher
 
 ### Extra
 - nvchad *
