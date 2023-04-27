@@ -1,0 +1,70 @@
+{
+  /************
+   * Extensions
+   *************/
+  // ? GitLens
+  "gitlens.hovers.currentLine.over": "line",
+  // ? Live Server
+  "liveServer.settings.donotShowInfoMsg": true,
+
+  /************
+   * Themes
+   *************/
+  "workbench.colorTheme": "Catppuccin Macchiato",
+  "workbench.productIconTheme": "material-product-icons",
+
+  /************
+   * Misc
+   *************/
+  // ? Emmet
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "vue-html": "html",
+    "vue": "html"
+  },
+  // ? Workbench
+  "workbench.editor.enablePreview": false,
+  "workbench.startupEditor": "none",
+  // ? Editor
+  // * Jetbrains Mono
+  "editor.fontFamily": "'JetBrainsMono NF', 'CaskaydiaCove Nerd Font', 'Fira Code', monospace",
+  // * Caskaydia Cove
+  // "editor.fontFamily": "'CaskaydiaCove Nerd Font', 'JetBrainsMono NF', 'Fira Code', monospace",
+  // * Fira Code
+  // "editor.fontFamily": "'Fira Code', 'JetBrainsMono NF', 'CaskaydiaCove Nerd Font', monospace",
+  // * Monospace
+  // "editor.fontFamily": "monospace",
+  "editor.fontSize": 20,
+  "editor.fontLigatures": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.linkedEditing": true,
+  "editor.wordWrap": "on",
+  "editor.lineNumbers": "relative",
+  "editor.tabSize": 2,
+  // ? Git
+  "git.autofetch": true,
+  "git.enableSmartCommit": true,
+  "git.openRepositoryInParentFolders": "never",
+  "security.workspace.trust.untrustedFiles": "open",
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  // "vsicons.dontShowNewVersionMessage": true,
+  "sync.gist": "647024d1850fd105748c948c3ae60ceb",
+
+  /************
+   * Languages
+   *************/
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.tabSize": 4
+  },
+  "python.defaultInterpreterPath": "/usr/bin/python3",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "vscode-pets.petColor": "white",
+  "vscode-pets.petType": "totoro",
+  "vscode-pets.throwBallWithMouse": true,
+  "vscode-pets.petSize": "medium",
+  "git.confirmSync": false
+}
