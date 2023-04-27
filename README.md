@@ -20,14 +20,15 @@ You can check the sub-branches of the repo for the os that you like:
 - [Extras](https://github.com/JustAsteri/dotfiles/tree/extra)
 
 ## Packages
+> Manual Installations Packages are marked with an *
 
 ### Development
 
-- python
+- python 
 - nodejs
-- nvm
-- npm
-- pnpm
+- nvm *
+- npm 
+- pnpm *
 - vite
 - python-pip
 - git
@@ -58,6 +59,8 @@ You can check the sub-branches of the repo for the os that you like:
 - bat
 - bottom
 - neofetch
+- zsh
+- fzf *
 
 ### Apps
 
@@ -66,7 +69,13 @@ You can check the sub-branches of the repo for the os that you like:
 - rofi
 - qbittorrent
 - VScode
-- Google Chrome
+- Microsoft edge
 - Anki
 - mpv
 - libre office
+
+### Extra
+- nvchad *
+- oh my zsh *
+  - vi-mode
+  - autocompletation
