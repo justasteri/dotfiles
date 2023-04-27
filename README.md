@@ -39,7 +39,7 @@ You can check the sub-branches of the repo for the os that you like:
 - yay
 - brightnessctl
 
-### Utilities for the terminal
+#### Utilities for the terminal
 
 - ripgrep
 - gnome-keyring
@@ -59,7 +59,7 @@ You can check the sub-branches of the repo for the os that you like:
 - bottom
 - neofetch
 
-### Apps
+#### Apps
 
 - kitty
 - flameshot
