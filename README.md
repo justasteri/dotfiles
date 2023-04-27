@@ -79,3 +79,4 @@ You can check the sub-branches of the repo for the os that you like:
 - oh my zsh *
   - vi-mode
   - autocompletation
+- exercism *
