@@ -12,7 +12,9 @@ These are my dotfiles for different operating systems:
 ## Packages
 > Manual Installations Packages are marked with an *
 
-### Development
+### Terminal
+
+#### Development
 
 - python 
 - nodejs
@@ -23,14 +25,14 @@ These are my dotfiles for different operating systems:
 - python-pip
 - git
 
-### Distro's packages
+#### Distro's packages
 
-#### ARCH
+##### ARCH
 
 - yay
 - brightnessctl
 
-### Utilities for the terminal
+#### Utilities
 
 - ripgrep
 - gnome-keyring
@@ -64,6 +66,9 @@ These are my dotfiles for different operating systems:
 - mpv
 - libre office
 - balena etcher
+- postman
+- obsidian
+- google drive
 
 ### Extra
 - nvchad *
