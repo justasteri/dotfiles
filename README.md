@@ -105,6 +105,9 @@ These are my dotfiles for different operating systems:
 | the king of buttons | 374005964
 
 ## Shortcuts
+- Command -> Needs a modifier (shift, alt, control) 
+- Control o Super
+
 | Keys | Action |
 | ---- | ------ |
 | Super + return | kitty
