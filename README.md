@@ -54,7 +54,7 @@ These are my dotfiles for different operating systems:
 - zsh
 - fzf *
 
-### Apps
+## Apps
 
 - kitty
 - flameshot
@@ -69,6 +69,15 @@ These are my dotfiles for different operating systems:
 - postman
 - obsidian
 - google drive
+
+### MacOS only
+| Name | Web |
+| ---- | --- |
+| alt-tab |
+| monitor control |
+| app cleaner | https://freemacsoft.net/appcleaner/
+| shottr | https://shottr.cc/
+| alfred |
 
 ### Extra
 - nvchad *
