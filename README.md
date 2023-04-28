@@ -103,3 +103,8 @@ These are my dotfiles for different operating systems:
 | review heatmap | 1771074083
 | spped focus | 1046608507
 | the king of buttons | 374005964
+
+## Shortcuts
+| Keys | Action |
+| ---- | ------ |
+| Super + return | kitty
