@@ -73,6 +73,7 @@ These are my dotfiles for different operating systems:
 - img-optim / https://imageoptim.com/
 - discord
 - slack
+- espanso * +
 
 ### MacOS only
 | Name | Web |
