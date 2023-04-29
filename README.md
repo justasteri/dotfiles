@@ -44,6 +44,11 @@ These are my dotfiles for different operating systems:
 - neovim
 - tmux +
   - [tmux-plugins](https://github.com/tmux-plugins/tpm)
+    ```
+    set -g @plugin 'christoomey/vim-tmux-navigator'
+    set -g @plugin 'catppuccin/tmux'
+    set -g @plugin 'tmux-plugins/tmux-yank'
+    ```
 - lsd
 - htop
 - tree
