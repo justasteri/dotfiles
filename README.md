@@ -90,6 +90,10 @@ These are my dotfiles for different operating systems:
 | alfred |
 | dropzone4 | https://apps.apple.com/us/app/dropzone-4/id1485052491?mt=12
 | Tinkertool | http://www.bresink.com/osx/TinkerTool.html
+| onething | https://apps.apple.com/us/app/one-thing/id1604176982?mt=12
+| copy clip | https://apps.apple.com/us/app/copyclip-clipboard-history/id595191960?mt=12
+| hidden bar | https://apps.apple.com/us/app/hidden-bar/id1452453066?mt=12
+| onyx | https://www.titanium-software.fr/en/onyx.html
 
 ### Extra
 - nvchad *
