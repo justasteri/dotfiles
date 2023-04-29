@@ -122,6 +122,7 @@ These are my dotfiles for different operating systems:
 | Keys | Action |
 | ---- | ------ |
 | Super + return | kitty
+| Super + w | web browser
 
 ## Spaces
 | N. of Space | Workflow | 
