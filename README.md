@@ -109,3 +109,14 @@ These are my dotfiles for different operating systems:
 | Keys | Action |
 | ---- | ------ |
 | Super + return | kitty
+
+## Spaces
+| N. of Space | Workflow | 
+| ----------- | -------- |
+| 1 | Misc
+| 2 | Web Browser
+| 3 | File explorer
+| 4 | Code editor
+| 5 | Terminal
+| 6 | Media (music, videos, etc)
+| 7 | git
