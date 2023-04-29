@@ -70,6 +70,9 @@ These are my dotfiles for different operating systems:
 - postman
 - obsidian
 - google drive
+- img-optim / https://imageoptim.com/
+- discord
+- slack
 
 ### MacOS only
 | Name | Web |
@@ -79,6 +82,8 @@ These are my dotfiles for different operating systems:
 | app cleaner | https://freemacsoft.net/appcleaner/
 | shottr | https://shottr.cc/
 | alfred |
+| dropzone4 | https://apps.apple.com/us/app/dropzone-4/id1485052491?mt=12
+| Tinkertool | http://www.bresink.com/osx/TinkerTool.html
 
 ### Extra
 - nvchad *
