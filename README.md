@@ -11,6 +11,7 @@ These are my dotfiles for different operating systems:
 
 ## Packages
 > Manual Installations Packages are marked with an *
+> Packaged with config files are marked with an +
 
 ### Terminal
 
@@ -23,7 +24,7 @@ These are my dotfiles for different operating systems:
 - pnpm *
 - vite
 - python-pip
-- git
+- git +
 
 #### Distro's packages
 
@@ -39,9 +40,9 @@ These are my dotfiles for different operating systems:
 - exfat-utils
 - fuse-exfat
 - sd
-- ranger
+- ranger +
 - neovim
-- tmux
+- tmux +
 - lsd
 - htop
 - tree
@@ -50,17 +51,17 @@ These are my dotfiles for different operating systems:
 - patch
 - bat
 - bottom
-- neofetch
-- zsh
+- neofetch +
+- zsh +
 - fzf *
 
 ## Apps
 
-- kitty
+- kitty +
 - flameshot
 - rofi
 - qbittorrent
-- VScode
+- VScode +
 - Microsoft edge
 - Anki
 - mpv
@@ -84,6 +85,7 @@ These are my dotfiles for different operating systems:
 - oh my zsh *
   - vi-mode
   - autocompletation
+  - z
 - exercism *
 
 ## Anki Plugins
