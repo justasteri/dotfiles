@@ -118,11 +118,18 @@ These are my dotfiles for different operating systems:
 | the king of buttons | 374005964
 
 ## Shortcuts
+> Super = Windows, Control in Macos
 
 | Keys | Action |
 | ---- | ------ |
+| super + (1-0) | change desktop
 | Super + return | kitty
 | Super + w | web browser
+| super + e | file explorer
+| super + space | app explorer
+| super + q | quit app
+| super + s | screenshot
+| super + shitft + L | logout
 
 ## Spaces
 | N. of Space | Workflow | 
