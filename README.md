@@ -87,6 +87,7 @@ These are my dotfiles for different operating systems:
 - qbittorrent
 - VScode +
 - Microsoft edge
+  - (theme catppuccin)[https://github.com/catppuccin/chrome]
 - Anki
 - mpv
 - libre office
