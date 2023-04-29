@@ -121,4 +121,3 @@ These are my dotfiles for different operating systems:
 | 4 | Code editor
 | 5 | Terminal
 | 6 | Media (music, videos, etc)
-| 7 | git
