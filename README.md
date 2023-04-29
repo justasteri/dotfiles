@@ -112,6 +112,9 @@ These are my dotfiles for different operating systems:
   - autocompletation
   - z
 - exercism *
+- https://github.com/catppuccin/duckduckgo
+- https://github.com/catppuccin/vimium
+- https://github.com/catppuccin/slack
 
 ## Anki Plugins
 | Name | Code |
@@ -130,6 +133,7 @@ These are my dotfiles for different operating systems:
 | review heatmap | 1771074083
 | spped focus | 1046608507
 | the king of buttons | 374005964
+| re-color | 688199788
 
 ## Shortcuts
 > Super = Windows, Control in Macos
