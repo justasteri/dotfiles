@@ -43,6 +43,7 @@ These are my dotfiles for different operating systems:
 - ranger +
 - neovim
 - tmux +
+  - [tmux-plugins](https://github.com/tmux-plugins/tpm)
 - lsd
 - htop
 - tree
