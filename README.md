@@ -74,7 +74,11 @@ These are my dotfiles for different operating systems:
 - discord
 - slack
 - espanso * +
-  - 
+  - arrows
+  - kaimoji
+  - foreign-thanks
+  - mac-symbols
+  - lorem
 
 ### MacOS only
 | Name | Web |
