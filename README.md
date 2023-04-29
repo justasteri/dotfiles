@@ -49,6 +49,7 @@ These are my dotfiles for different operating systems:
 | copy clip | https://apps.apple.com/us/app/copyclip-clipboard-history/id595191960?mt=12
 | hidden bar | https://apps.apple.com/us/app/hidden-bar/id1452453066?mt=12
 | onyx | https://www.titanium-software.fr/en/onyx.html
+| background-music | https://github.com/kyleneideck/BackgroundMusic#download
 
 #### Utilities
 
@@ -67,7 +68,6 @@ These are my dotfiles for different operating systems:
     set -g @plugin 'tmux-plugins/tmux-yank'
     ```
 - lsd
-- htop
 - tree
 - make
 - unzip
@@ -78,6 +78,7 @@ These are my dotfiles for different operating systems:
   - [with kitties](https://github.com/andreasgrafen/pfetch-with-kitties)
 - zsh +
 - fzf *
+- lazygit
 
 ## Apps
 
@@ -115,6 +116,15 @@ These are my dotfiles for different operating systems:
 - https://github.com/catppuccin/duckduckgo
 - https://github.com/catppuccin/vimium
 - https://github.com/catppuccin/slack
+- https://github.com/catppuccin/anki
+- https://github.com/catppuccin/github
+- https://github.com/catppuccin/qbittorrent
+- https://github.com/catppuccin/reddit
+- https://github.com/catppuccin/twitch
+- https://github.com/catppuccin/youtube
+- https://github.com/catppuccin/bottom
+- https://github.com/catppuccin/fzf
+- https://github.com/catppuccin/lazygit
 
 ## Anki Plugins
 | Name | Code |
