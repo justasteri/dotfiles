@@ -10,8 +10,8 @@ These are my dotfiles for different operating systems:
   - Ubuntu based distros
 
 ## Packages
-> Manual Installations Packages are marked with an *
-> Packaged with config files are marked with an +
+> Packages with **Manual** Installations are marked with an *
+> Packaged with **config** files are marked with an +
 
 ### Terminal
 
@@ -26,12 +26,29 @@ These are my dotfiles for different operating systems:
 - python-pip
 - git +
 
-#### Distro's packages
+#### Distro/OS packages
 
-##### ARCH
+##### LINUX
+
+###### ARCH
 
 - yay
 - brightnessctl
+
+##### MacOS
+| Name | Web |
+| ---- | --- |
+| alt-tab |
+| monitor control |
+| app cleaner | https://freemacsoft.net/appcleaner/
+| shottr | https://shottr.cc/
+| alfred |
+| dropzone4 | https://apps.apple.com/us/app/dropzone-4/id1485052491?mt=12
+| Tinkertool | http://www.bresink.com/osx/TinkerTool.html
+| onething | https://apps.apple.com/us/app/one-thing/id1604176982?mt=12
+| copy clip | https://apps.apple.com/us/app/copyclip-clipboard-history/id595191960?mt=12
+| hidden bar | https://apps.apple.com/us/app/hidden-bar/id1452453066?mt=12
+| onyx | https://www.titanium-software.fr/en/onyx.html
 
 #### Utilities
 
@@ -57,7 +74,8 @@ These are my dotfiles for different operating systems:
 - patch
 - bat
 - bottom
-- neofetch +
+- pfetch +
+  - [with kitties](https://github.com/andreasgrafen/pfetch-with-kitties)
 - zsh +
 - fzf *
 
@@ -85,21 +103,6 @@ These are my dotfiles for different operating systems:
   - foreign-thanks
   - mac-symbols
   - lorem
-
-### MacOS only
-| Name | Web |
-| ---- | --- |
-| alt-tab |
-| monitor control |
-| app cleaner | https://freemacsoft.net/appcleaner/
-| shottr | https://shottr.cc/
-| alfred |
-| dropzone4 | https://apps.apple.com/us/app/dropzone-4/id1485052491?mt=12
-| Tinkertool | http://www.bresink.com/osx/TinkerTool.html
-| onething | https://apps.apple.com/us/app/one-thing/id1604176982?mt=12
-| copy clip | https://apps.apple.com/us/app/copyclip-clipboard-history/id595191960?mt=12
-| hidden bar | https://apps.apple.com/us/app/hidden-bar/id1452453066?mt=12
-| onyx | https://www.titanium-software.fr/en/onyx.html
 
 ### Extra
 - nvchad *
