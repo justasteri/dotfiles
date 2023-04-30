@@ -22,7 +22,6 @@ These are my dotfiles for different operating systems:
 - nvm *
 - npm 
 - pnpm *
-- vite
 - python-pip
 - git +
 
