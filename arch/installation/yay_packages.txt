@@ -1,0 +1,4 @@
+visual-studio-code-bin 
+libxcrypt-compat 
+trimage 
+slack 

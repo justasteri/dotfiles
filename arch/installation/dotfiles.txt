@@ -1,0 +1,1 @@
+.gitconfig .local/share/fonts .zshrc .config/kitty .config/ranger
