@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(themes zsh-vi-mode zsh-autosuggestions z)
+plugins=(zsh-syntax-highlighting themes zsh-vi-mode zsh-autosuggestions z)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -118,7 +118,7 @@ rehash_precmd() {
 add-zsh-hook -Uz precmd rehash_precmd
 
 ########### Alias ###########
-alias c="clear"
+alias c='clear'
 alias grep='grep --color=auto'
 alias cat='bat --style=plain --paging=never'
 alias ls='lsd'
@@ -135,13 +135,13 @@ alias gbr='git branch'
 alias gp='git push'
 alias gpl='git pull'
 # Git/>
-# <Pacman
-alias install="sudo pacman -S "
-alias update="sudo pacman -Syyu "
-alias autoclean="sudo pacman -Rsn $(pacman -Qdtq)"
-# Pacman/>
+# <Brew>
+alias install='brew install'
+alias cask='brew install --cask'
+# </Brew/>
 
 ########### External Apps ###########
+pfetch
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -151,7 +151,6 @@ export FZF_DEFAULT_OPTS=" \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
 --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
 
-
 # NVM
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -160,11 +159,13 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 ########### execution ################
 
 # Dotfiles repository
-echo "\n### DOTFILES UPDATES ###"
-cd dotfiles
-git status /home/justasteri/dotfiles/
-cd $HOME
-echo "########################\n"
+# echo "\n### DOTFILES UPDATES ###"
+# cd dotfiles
+# git status /home/justasteri/dotfiles/
+# cd $HOME
+# echo "########################\n"
 
 # Path
 export PATH=~/bin:$PATH
+export PATH=/opt/homebrew/bin:$PATH
+export PATH=$PATH:/Users/justasteri/Library/Python/3.9/bin
