@@ -62,3 +62,6 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 cd ~/.config/neofetch/ && rename config.conf configbackup.conf config.conf
 git clone https://github.com/Chick2D/neofetch-themes/
 cat neofetch-themes/small/blockfetch.conf > ~/.config/neofetch/config.conf
+
+# P10K
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
