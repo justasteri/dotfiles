@@ -49,7 +49,6 @@ These are my dotfiles for different operating systems:
 | copy clip | https://apps.apple.com/us/app/copyclip-clipboard-history/id595191960?mt=12
 | hidden bar | https://apps.apple.com/us/app/hidden-bar/id1452453066?mt=12
 | onyx | https://www.titanium-software.fr/en/onyx.html
-| background-music | https://github.com/kyleneideck/BackgroundMusic#download
 
 #### Utilities
 
