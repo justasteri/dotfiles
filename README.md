@@ -11,6 +11,7 @@ These are my dotfiles for different operating systems:
 
 ## Packages
 > Packages with **Manual** Installations are marked with an *
+
 > Packaged with **config** files are marked with an +
 
 ### Terminal
