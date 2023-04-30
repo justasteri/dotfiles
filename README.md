@@ -123,7 +123,6 @@ These are my dotfiles for different operating systems:
 - https://github.com/catppuccin/bottom
 - https://github.com/catppuccin/fzf
 - https://github.com/catppuccin/lazygit
-- https://github.com/catppuccin/chrome
 
 ## Anki Plugins
 | Name | Code |
@@ -183,3 +182,4 @@ These are my dotfiles for different operating systems:
 | stylus | |
 | vimium | | 
 | yomichan + | |
+| theme catppuccin | theme for chrome | https://chrome.google.com/webstore/detail/catppuccin-chrome-theme-m/bkkmolkhemgaeaeggcmfbghljjjoofoh
