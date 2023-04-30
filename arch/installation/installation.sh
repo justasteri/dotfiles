@@ -10,3 +10,4 @@ sh ~/make-symlinks.sh &&
 # sudo ln -s /var/lib/snapd/snap /snap &&
 sudo pacman -Rsn $(pacman -Qdtq) &&
 sh ./manual_installation.sh &&
+fc-cache
