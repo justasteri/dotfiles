@@ -76,6 +76,7 @@ These are my dotfiles for different operating systems:
 - bat
 - bottom
 - neofetch +
+  - https://github.com/Chick2D/neofetch-themes
 - zsh +
 - fzf *
 - lazygit
