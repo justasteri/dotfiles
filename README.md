@@ -169,3 +169,18 @@ These are my dotfiles for different operating systems:
 | 5 | Terminal
 | 6 | Media (music, videos, etc)
 | 7 | Chats (whatsapp, discrod, slack, etc)
+
+## Web Extensions
+| Name | Use | URL |
+| ---- | --- | --- |
+| bitwarden | |
+| keepa | | 
+| raindrop | | 
+| ublock | |
+| df tube | |
+| imtranslator + | |
+| Migaku + | |
+| medium unlocker | | 
+| stylus | |
+| vimium | | 
+| yomichan + | |
