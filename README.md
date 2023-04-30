@@ -72,7 +72,7 @@ These are my dotfiles for different operating systems:
 - patch
 - bat
 - bottom
-- pfetch +
+- neofetch +
   - [with kitties](https://github.com/andreasgrafen/pfetch-with-kitties)
 - zsh +
 - fzf *
