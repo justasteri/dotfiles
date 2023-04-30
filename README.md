@@ -75,7 +75,6 @@ These are my dotfiles for different operating systems:
 - bat
 - bottom
 - neofetch +
-  - [with kitties](https://github.com/andreasgrafen/pfetch-with-kitties)
 - zsh +
 - fzf *
 - lazygit
