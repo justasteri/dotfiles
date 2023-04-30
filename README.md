@@ -33,6 +33,7 @@ These are my dotfiles for different operating systems:
 
 - yay
 - brightnessctl
+- https://trimage.org/
 
 ##### MacOS
 | Name | Web |
