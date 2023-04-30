@@ -1,1 +1,1 @@
-.gitconfig .zshrc .tmux.conf .local/share/fonts .config/kitty .config/ranger .config/espanso .config/lazygit .config/bottom .config/neofetch .config/qbittorrent .config/nvim/lua/custom
+.gitconfig .zshrc .tmux.conf .p10k.zsh .local/share/fonts .config/kitty .config/ranger .config/espanso .config/lazygit .config/bottom .config/neofetch .config/qbittorrent .config/nvim/lua/custom
