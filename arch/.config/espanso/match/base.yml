@@ -1,0 +1,69 @@
+# espanso match file
+
+# For a complete introduction, visit the official docs at: https://espanso.org/docs/
+
+# You can use this file to define the base matches (aka snippets)
+# that will be available in every application when using espanso.
+
+# Matches are substitution rules: when you type the "trigger" string
+# it gets replaced by the "replace" string.
+matches:
+  # Simple text replacement
+  # - trigger: ":espanso"
+  #   replace: "Hi there!"
+
+  # NOTE: espanso uses YAML to define matches, so pay attention to the indentation!
+
+  # But matches can also be dynamic:
+
+  # < --- VARIABLES --- >
+  # <Date>
+  - trigger: ":date"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%d/%m/%Y"
+  # <Date/>
+  # <Time>
+  - trigger: ":time"
+    replace: "{{mytime}}"
+    vars:
+      - name: mytime
+        type: date
+        params:
+          format: "%H:%M:%S"
+  # <Time/>
+  # <Full date>
+  - trigger: ":now"
+    replace: "{{myfulldate}}"
+    vars:
+      - name: myfulldate
+        type: date
+        params:
+          format: "%d/%m/%Y %H:%M:%S"
+  # <Full date/>
+  # < --- VARIABLES --- >
+
+  # Print the output of a shell command
+  - trigger: ":shell"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo 'Hello from your shell'"
+
+  # < --- Constants --- >
+  # <Emails>
+  - trigger: ":empr"
+    replace: "moyauriel05@gmail.com"
+  - trigger: ":emtr"
+    replace: "mailparaotrascosas45@gmail.com"
+  - trigger: ":emsc"
+    replace: "020000251@upsrj.edu.mx"
+  # <Emails/>
+  # < --- Constants --- >
+
+  # And much more! For more information, visit the docs: https://espanso.org/docs/
