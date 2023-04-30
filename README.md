@@ -150,7 +150,7 @@ These are my dotfiles for different operating systems:
 | Keys | Action |
 | ---- | ------ |
 | super + (1-0) | change desktop
-| Super + return | kitty
+| Super + return | terminal
 | Super + w | web browser
 | super + e | file explorer
 | super + space | app explorer
