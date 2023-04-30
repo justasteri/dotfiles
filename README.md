@@ -178,7 +178,7 @@ These are my dotfiles for different operating systems:
 | raindrop | | 
 | ublock | |
 | df tube | |
-| imtranslator + | |
+| imtranslator | |
 | Migaku + | |
 | medium unlocker | | 
 | stylus | |
