@@ -87,8 +87,7 @@ These are my dotfiles for different operating systems:
 - rofi
 - qbittorrent
 - VScode +
-- Microsoft edge
-  - (theme catppuccin)[https://github.com/catppuccin/chrome]
+- SRWare Iron
 - Anki
 - mpv
 - libre office
@@ -125,6 +124,7 @@ These are my dotfiles for different operating systems:
 - https://github.com/catppuccin/bottom
 - https://github.com/catppuccin/fzf
 - https://github.com/catppuccin/lazygit
+- https://github.com/catppuccin/chrome
 
 ## Anki Plugins
 | Name | Code |
