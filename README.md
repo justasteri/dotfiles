@@ -143,6 +143,7 @@ These are my dotfiles for different operating systems:
 | spped focus | 1046608507
 | the king of buttons | 374005964
 | re-color | 688199788
+| yomichan forvo server | 580654285
 
 ## Shortcuts
 > Super = Windows, Control in Macos
