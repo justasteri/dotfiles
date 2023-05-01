@@ -132,7 +132,7 @@ These are my dotfiles for different operating systems:
 | Migaku Kanji God | -
 | Anki connect | 2055492159
 | advanced answer sounds | 1167194350
-| anki zoom | 538879081
+| zoom 2.1 | 1846592880
 | contanki | 1898790263
 | enhanced cloze | 1990296174
 | mini format pack | 295889520
