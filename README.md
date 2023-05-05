@@ -83,7 +83,8 @@ These are my dotfiles for different operating systems:
 
 ## Apps
 
-- kitty +
+- alacritty +
+  - https://github.com/catppuccin/alacritty
 - flameshot
 - rofi
 - qbittorrent
