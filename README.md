@@ -5,9 +5,7 @@
 These are my dotfiles for different operating systems:
 
 - MacOS
-- Linux
-  - Arch based distros
-  - Ubuntu based distros
+- Arch
 
 ## Packages
 > Packages with **Manual** Installations are marked with an *
