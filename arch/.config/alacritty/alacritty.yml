@@ -1,0 +1,36 @@
+import:
+  # uncomment the flavour you want below:
+  - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
+#  - ~/.config/alacritty/catppuccin/catppuccin-macchiato.yml
+#  - ~/.config/alacritty/catppuccin/catppuccin-frappe.yml
+#  - ~/.config/alacritty/catppuccin/catppuccin-latte.yml
+
+font:
+  normal:
+    #family: FiraCode Nerd Font
+    family: CaskaydiaCove Nerd Font
+    #family: monospace
+    style: Regular
+
+  bold:
+    #family: FiraCode Nerd Font
+    family: CaskaydiaCove Nerd Font
+    # family: monospace
+    style: Bold
+
+  italic:
+    #family: FiraCode Nerd Font
+    family: CaskaydiaCove Nerd Font
+    # family: monospace
+    style: Italic
+
+  bold_italic:
+    #family: FiraCode Nerd Font
+    family: CaskaydiaCove Nerd Font
+    # family: monospace
+    style: Bold Italic
+
+  size: 18
+
+#env:
+    #TERM: xterm-256color
