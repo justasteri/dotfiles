@@ -6,8 +6,7 @@
 sudo pacman -Syyu &&
 xargs -a packages.txt sudo pacman -S &&
 xargs -a yay_packages.txt yay -S &&
-sh ~/make-symlinks.sh &&
-# sudo ln -s /var/lib/snapd/snap /snap &&
-sudo pacman -Rsn $(pacman -Qdtq) &&
 sh ./manual_installation.sh &&
+sudo pacman -Rsn $(pacman -Qdtq) &&
+sh ~/make-symlinks.sh &&
 fc-cache

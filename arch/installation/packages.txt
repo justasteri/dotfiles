@@ -1,7 +1,7 @@
 python3 
 python-pip 
 yay 
-kitty 
+alacritty 
 ranger 
 flameshot 
 neovim 
@@ -14,7 +14,6 @@ tree
 make 
 unzip 
 git 
-brightnessctl 
 patch 
 bat 
 bottom 
@@ -26,4 +25,3 @@ exfat-utils
 fuse-exfat 
 sd 
 lazygit 
-discord 
