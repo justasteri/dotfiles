@@ -1,11 +1,5 @@
 # Dotfiles
-
 ---
-
-These are my dotfiles for different operating systems:
-
-- MacOS
-- Arch
 
 ## Packages
 > Packages with **Manual** Installations are marked with an *
@@ -27,28 +21,6 @@ These are my dotfiles for different operating systems:
 #### Distro/OS packages
 
 ##### LINUX
-
-###### ARCH
-
-- yay
-- brightnessctl
-- https://trimage.org/
-
-##### OSX
-| Name | Web |
-| ---- | --- |
-| alt-tab |
-| monitor control |
-| app cleaner | https://freemacsoft.net/appcleaner/
-| shottr | https://shottr.cc/
-| alfred |
-| dropzone4 | https://apps.apple.com/us/app/dropzone-4/id1485052491?mt=12
-| Tinkertool | http://www.bresink.com/osx/TinkerTool.html
-| onething | https://apps.apple.com/us/app/one-thing/id1604176982?mt=12
-| copy clip | https://apps.apple.com/us/app/copyclip-clipboard-history/id595191960?mt=12
-| hidden bar | https://apps.apple.com/us/app/hidden-bar/id1452453066?mt=12
-| onyx | https://www.titanium-software.fr/en/onyx.html
-| img-optim | https://imageoptim.com/
 
 #### Utilities
 
@@ -143,44 +115,4 @@ These are my dotfiles for different operating systems:
 | the king of buttons | 374005964
 | re-color | 688199788
 | yomichan forvo server | 580654285
-
-## Shortcuts
-> Super = Windows, Control in Macos
-
-| Keys | Action |
-| ---- | ------ |
-| super + (1-0) | change desktop
-| Super + return | terminal
-| Super + w | web browser
-| super + e | file explorer
-| super + space | app explorer
-| super + q | quit app
-| super + s | screenshot
-| super + shitft + L | logout
-
-## Spaces
-| N. of Space | Workflow | 
-| ----------- | -------- |
-| 1 | Misc
-| 2 | Web Browser
-| 3 | File explorer
-| 4 | Code editor
-| 5 | Terminal
-| 6 | Media (music, videos, etc)
-| 7 | Chats (whatsapp, discrod, slack, etc)
-
-## Web Extensions
-| Name | Use | URL |
-| ---- | --- | --- |
-| bitwarden | |
-| keepa | | 
-| raindrop | | 
-| ublock | |
-| df tube | |
-| imtranslator | |
-| Migaku + | |
-| medium unlocker | | 
-| stylus | |
-| vimium | | 
 | yomichan + | |
-| theme catppuccin | theme for chrome | https://chrome.google.com/webstore/detail/catppuccin-chrome-theme-m/bkkmolkhemgaeaeggcmfbghljjjoofoh
