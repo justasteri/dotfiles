@@ -10,13 +10,14 @@
 
 #### Development
 
-- python 
-- nodejs
+- pyenv 
 - nvm *
 - npm 
 - pnpm *
 - python-pip
 - git +
+- vite
+- github cli (gh)
 
 #### Distro/OS packages
 
