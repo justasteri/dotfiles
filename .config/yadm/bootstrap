@@ -1,2 +1,76 @@
 #!/bin/sh
 
+### INSTALACION ###
+
+cd
+# Actualizar los mirrors de pacman y actualizar el sistema
+sudo pacman -Syyu
+
+# Instalar paquetes desde packages.txt con pacman
+xargs -a packages.txt sudo pacman -S --noconfirm
+
+# Instalar paquetes desde yay_packages.txt con yay (AUR helper)
+xargs -a yay_packages.txt yay -S --noconfirm
+
+# Remover paquetes huérfanos con pacman
+sudo pacman -Rsn $(pacman -Qdtq) --noconfirm
+
+# Actualizar la cache de fuentes
+fc-cache
+
+# Notificar al usuario que el script ha finalizado
+echo "Instalation completed."
+
+### MANUAL INSTALATIONS ###
+
+echo "### Starting manual instalations ###"
+# Oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Define custom directories
+ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
+NVIM_CONFIG=$HOME/.config/nvim
+FZF_DIR=$HOME/.fzf
+TMUX_PLUGIN_DIR=$HOME/.tmux/plugins/tpm
+
+# Oh-my-zsh plugins
+# vi-mode
+if [ ! -d "$ZSH_CUSTOM/plugins/zsh-vi-mode" ]; then
+    git clone https://github.com/jeffreytse/zsh-vi-mode $ZSH_CUSTOM/plugins/zsh-vi-mode
+fi
+
+# autosuggestions
+if [ ! -d "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions" ]; then
+    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+fi
+
+if [ ! -d "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting" ]; then
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+fi
+
+# FZF
+if [ ! -d "$FZF_DIR" ]; then
+    git clone --depth 1 https://github.com/junegunn/fzf.git $FZF_DIR
+    $FZF_DIR/install --all
+fi
+
+# NVM
+if [ ! -d "$HOME/.nvm" ]; then
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | sh
+fi
+
+# NvChad
+if [ ! -d "$NVIM_CONFIG" ]; then
+  git clone https://github.com/NvChad/starter
+fi
+
+# TMUX plugins
+if [ ! -d "$TMUX_PLUGIN_DIR" ]; then
+    git clone https://github.com/tmux-plugins/tpm $TMUX_PLUGIN_DIR
+fi
+
+# Miniconda
+mkdir -p ~/miniconda3
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
+bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+rm -rf ~/miniconda3/miniconda.sh
