@@ -20,7 +20,6 @@ fuse-exfat
 sd  
 lazygit  
 qutebrowser  
-catppuccin-cursors-mocha  
 spotify-launcher  
 yadm  
 github-cli 
