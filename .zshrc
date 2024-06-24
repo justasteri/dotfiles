@@ -141,7 +141,3 @@ alias cat='bat --style=plain --paging=never'
 alias ls='lsd'
 alias zshconfig="nvim ~/.zshrc"
 alias logout="sudo pkill -u justasteri"
-# Pacman
-alias install="sudo pacman -S "
-alias update="sudo pacman -Syyu "
-alias autoclean="sudo pacman -Rsn $(pacman -Qdtq)"

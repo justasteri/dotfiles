@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# === Variables ===
+distro_name=$(lsb_release -is)
+
 # Define custom directories
 ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
 NVIM_CONFIG=$HOME/.config/nvim
@@ -9,17 +12,16 @@ TMUX_PLUGIN_DIR=$HOME/.tmux/plugins/tpm
 ### INSTALACION ###
 
 cd
-# Actualizar los mirrors de pacman y actualizar el sistema
-sudo pacman -Syyu
-
-# Instalar paquetes desde packages.txt con pacman
-sudo pacman -S --needed --noconfirm  $(< packages.txt)
-
-# Instalar paquetes desde yay_packages.txt con yay (AUR helper)
-sudo pacman -S --needed --noconfirm  $(< yay_packages.txt)
-
-# Remover paquetes huérfanos con pacman
-sudo pacman -Rsn $(pacman -Qdtq) --noconfirm
+if [ $distro_name = 'EndeavourOS']; then
+    sudo pacman -Syyu
+    sudo pacman -S --needed --noconfirm  $(< packages.txt)
+    sudo pacman -S --needed --noconfirm  $(< yay_packages.txt)
+    sudo pacman -Rsn $(pacman -Qdtq) --noconfirm
+elif [ $distro_name = 'Fedora' ]; then
+    sudo dnf -y update
+    sudo dnf install -y $(< packages.txt)
+    sudo dnf autoremove -y
+fi
 
 # Actualizar la cache de fuentes
 fc-cache
