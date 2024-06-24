@@ -1,5 +1,11 @@
 #!/bin/sh
 
+# Define custom directories
+ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
+NVIM_CONFIG=$HOME/.config/nvim
+FZF_DIR=$HOME/.fzf
+TMUX_PLUGIN_DIR=$HOME/.tmux/plugins/tpm
+
 ### INSTALACION ###
 
 cd
@@ -19,7 +25,7 @@ sudo pacman -Rsn $(pacman -Qdtq) --noconfirm
 fc-cache
 
 # Notificar al usuario que el script ha finalizado
-echo "Packages Intallation completed."
+echo "=== Packages Intallation completed. ==="
 
 ### MANUAL INSTALATIONS ###
 
@@ -31,12 +37,6 @@ gh auth setup-git
 
 # Oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-# Define custom directories
-ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
-NVIM_CONFIG=$HOME/.config/nvim
-FZF_DIR=$HOME/.fzf
-TMUX_PLUGIN_DIR=$HOME/.tmux/plugins/tpm
 
 # Oh-my-zsh plugins
 # vi-mode
