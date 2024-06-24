@@ -12,7 +12,7 @@ TMUX_PLUGIN_DIR=$HOME/.tmux/plugins/tpm
 ### INSTALACION ###
 
 cd
-if [ $distro_name = 'EndeavourOS']; then
+if [ $distro_name = 'EndeavourOS' ]; then
     sudo pacman -Syyu
     sudo pacman -S --needed --noconfirm  $(< packages.txt)
     sudo pacman -S --needed --noconfirm  $(< yay_packages.txt)
