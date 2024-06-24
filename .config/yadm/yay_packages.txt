@@ -1,4 +1,4 @@
 google-chrome 
 libxcrypt-compat 
 visual-studio-code-bin 
-
+catppuccin-cursors-mocha 
