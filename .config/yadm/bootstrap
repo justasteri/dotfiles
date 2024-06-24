@@ -24,6 +24,11 @@ echo "Packages Intallation completed."
 ### MANUAL INSTALATIONS ###
 
 echo "### Starting manual installations ###"
+
+echo "Preparing git & github"
+gh auth login
+gh auth setup-git
+
 # Oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
