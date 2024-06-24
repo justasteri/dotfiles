@@ -19,11 +19,11 @@ sudo pacman -Rsn $(pacman -Qdtq) --noconfirm
 fc-cache
 
 # Notificar al usuario que el script ha finalizado
-echo "Instalation completed."
+echo "Packages Intallation completed."
 
 ### MANUAL INSTALATIONS ###
 
-echo "### Starting manual instalations ###"
+echo "### Starting manual installations ###"
 # Oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
