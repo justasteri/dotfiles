@@ -7,10 +7,10 @@ cd
 sudo pacman -Syyu
 
 # Instalar paquetes desde packages.txt con pacman
-xargs -a packages.txt sudo pacman -S --noconfirm
+sudo pacman -S --needed --noconfirm  $(< packages.txt)
 
 # Instalar paquetes desde yay_packages.txt con yay (AUR helper)
-xargs -a yay_packages.txt yay -S --noconfirm
+sudo pacman -S --needed --noconfirm  $(< yay_packages.txt)
 
 # Remover paquetes huérfanos con pacman
 sudo pacman -Rsn $(pacman -Qdtq) --noconfirm
