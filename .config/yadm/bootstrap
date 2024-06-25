@@ -1,6 +1,9 @@
 #!/bin/sh
 
-# === Variables ===
+# =================
+# === VARIABLES ===
+# =================
+
 distro_name=$(lsb_release -is)
 
 # Define custom directories
@@ -11,6 +14,10 @@ TMUX_PLUGIN_DIR=$HOME/.tmux/plugins/tpm
 MINICONDA_DIR=$HOME/miniconda3
 YADM_DIR=$HOME/.config/yadm
 YADM_ALT_DIR=$YADM_DIR/alt
+
+# =================
+# === FUNCTIONS ===
+# =================
 
 confirm() {
     while true; do
@@ -23,26 +30,36 @@ confirm() {
     done
 }
 
-
-### INSTALLATION ###
+# ====================
+# === INSTALATIONS ===
+# ====================
 
 cd
 if [ $distro_name = 'EndeavourOS' ]; then
-    if confirm "Do you want to update the package database and the system?"; then
+    if confirm "\n=== Do you want to update the package database and the system? (y,n) ==="; then
+        echo "=== Installing Updates ==="
         sudo pacman -Syyu --noconfirm
     else
-        echo "Skipping system update."
+        echo "=== Skipping system update ===\n"
     fi
-    sudo pacman -S --needed --noconfirm  $(< $YADM_ALT_DIR/packages.txt)
+
+    echo "=== Installing Packages ==="
+    sudo pacman -S --needed --noconfirm $(< $YADM_ALT_DIR/packages.txt)
+    echo "=== Installing OTHER Packages ==="
     yay -S --needed --noconfirm  $(< $YADM_ALT_DIR/yay_packages.txt)
+    echo "=== Removing Unused Packages ==="
     sudo pacman -Rsn $(pacman -Qdtq) --noconfirm
 elif [ $distro_name = 'Fedora' ]; then
     if confirm "Do you want to update the package database and the system?"; then
+        echo "=== Installing Updates ==="
         sudo dnf -y update
     else
-        echo "Skipping system update."
+        echo "=== Skipping system update ===\n"
     fi
+
+    echo "=== Installing Packages ==="
     sudo dnf install -y $(< $YADM_ALT_DIR/packages.txt)
+    echo "=== Removing Unused Packages ==="
     sudo dnf autoremove -y
 fi
 
@@ -50,54 +67,67 @@ fi
 fc-cache
 
 # Notify the user that the script has finished
-echo "=== Packages Intallation completed. ==="
+echo "\n=== Packages Intallation completed ===\n"
 
-### MANUAL INSTALATIONS ###
+# ===========================
+# === MANUAL INSTALATIONS ===
+# ===========================
 
-echo "### Starting manual installations ###"
+if confirm "\n=== Do you want to install manual packages? (y,n) ==="; then
+    echo "### Starting manual installations ###"
 
-echo "Preparing git & github"
-gh auth login
-gh auth setup-git
+    echo "=== Installing Github CLI ==="
+    gh auth login
+    gh auth setup-git
 
-# FZF
-if [ ! -d "$FZF_DIR" ]; then
-    git clone --depth 1 https://github.com/junegunn/fzf.git $FZF_DIR
-    $FZF_DIR/install --all
+    # FZF
+    if [ ! -d "$FZF_DIR" ]; then
+        echo "=== Installing FZF ==="
+        git clone --depth 1 https://github.com/junegunn/fzf.git $FZF_DIR
+        $FZF_DIR/install --all
+    fi
+
+    # NVM
+    if [ ! -d "$HOME/.nvm" ]; then
+        echo "=== Installing NVM ==="
+        curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | sh
+    fi
+
+    # lazyvim
+    if [ ! -d "$NVIM_CONFIG" ]; then
+        echo "=== Installing lazyvim ==="
+        git clone https://github.com/LazyVim/starter $NVIM_CONFIG
+        rm -rf ~/.config/nvim/.git
+    fi
+
+    # TMUX plugins
+    if [ ! -d "$TMUX_PLUGIN_DIR" ]; then
+        echo "=== Installing TMUX plugins ==="
+        git clone https://github.com/tmux-plugins/tpm $TMUX_PLUGIN_DIR
+    fi
+
+    # Miniconda
+    if [ ! -d "$MINICONDA_DIR" ]; then
+        echo "=== Installing Miniconda ==="
+        mkdir -p $MINICONDA_DIR
+        wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O $MINICONDA_DIR/miniconda.sh
+        bash $MINICONDA_DIR/miniconda.sh -b -u -p $MINICONDA_DIR
+        rm -rf $MINICONDA_DIR/miniconda.sh
+    fi
+
+    # Exercism
+    echo "=== Installing Exercism ==="
+    wget https://github.com/exercism/cli/releases/download/v3.4.0/exercism-3.4.0-linux-x86_64.tar.gz
+    tar -xf exercism-3.4.0-linux-x86_64.tar.gz
+    mkdir -p ~/bin
+    mv exercism ~/bin
+    ~/bin/exercism
+    echo 'export PATH=~/bin:$PATH' >> ~/.bash_profile
+    source ~/.bash_profile
+    cd $HOME
+    rm -rf exercism-3.4.0-linux-x86_64.tar.gz
+else
+    echo "=== Skipping manual installation ===\n"
 fi
 
-# NVM
-if [ ! -d "$HOME/.nvm" ]; then
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | sh
-fi
-
-# lazyvim
-if [ ! -d "$NVIM_CONFIG" ]; then
-  git clone https://github.com/LazyVim/starter $NVIM_CONFIG
-  rm -rf ~/.config/nvim/.git
-  
-fi
-
-# TMUX plugins
-if [ ! -d "$TMUX_PLUGIN_DIR" ]; then
-    git clone https://github.com/tmux-plugins/tpm $TMUX_PLUGIN_DIR
-fi
-
-# Miniconda
-if [ ! -d "$MINICONDA_DIR" ]; then
-    mkdir -p $MINICONDA_DIR
-    wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O $MINICONDA_DIR/miniconda.sh
-    bash $MINICONDA_DIR/miniconda.sh -b -u -p $MINICONDA_DIR
-    rm -rf $MINICONDA_DIR/miniconda.sh
-fi
-
-# Exercism
-wget https://github.com/exercism/cli/releases/download/v3.4.0/exercism-3.4.0-linux-x86_64.tar.gz
-tar -xf exercism-3.4.0-linux-x86_64.tar.gz
-mkdir -p ~/bin
-mv exercism ~/bin
-~/bin/exercism
-echo 'export PATH=~/bin:$PATH' >> ~/.bash_profile
-source ~/.bash_profile
-cd $HOME
-rm -rf exercism-3.4.0-linux-x86_64.tar.gz
+echo "\n=============================\n=== INSTALLATION COMPLETE ===\n=============================\n"
