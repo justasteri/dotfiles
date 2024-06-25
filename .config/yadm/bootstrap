@@ -32,7 +32,7 @@ if [ $distro_name = 'EndeavourOS' ]; then
         echo "Skipping system update."
     fi
     sudo pacman -S --needed --noconfirm  $(< $YADM_DIR/packages.txt)
-    sudo pacman -S --needed --noconfirm  $(< $YADM_DIR/yay_packages.txt)
+    yay -S --needed --noconfirm  $(< $YADM_DIR/yay_packages.txt)
     sudo pacman -Rsn $(pacman -Qdtq) --noconfirm
 elif [ $distro_name = 'Fedora' ]; then
     if confirm "Do you want to update the package database and the system?"; then
