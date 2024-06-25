@@ -58,9 +58,6 @@ echo "Preparing git & github"
 gh auth login
 gh auth setup-git
 
-# Zinit
-bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
-
 # FZF
 if [ ! -d "$FZF_DIR" ]; then
     git clone --depth 1 https://github.com/junegunn/fzf.git $FZF_DIR
