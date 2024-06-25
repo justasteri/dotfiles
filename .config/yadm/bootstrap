@@ -8,14 +8,15 @@ ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
 NVIM_CONFIG=$HOME/.config/nvim
 FZF_DIR=$HOME/.fzf
 TMUX_PLUGIN_DIR=$HOME/.tmux/plugins/tpm
+YADM_DIR=$HOME/.config/yadm
 
 ### INSTALACION ###
 
 cd
 if [ $distro_name = 'EndeavourOS' ]; then
     sudo pacman -Syyu --noconfirm
-    sudo pacman -S --needed --noconfirm  $(< packages.txt)
-    sudo pacman -S --needed --noconfirm  $(< yay_packages.txt)
+    sudo pacman -S --needed --noconfirm  $(< $YADM_DIR/packages.txt)
+    sudo pacman -S --needed --noconfirm  $(< $YADM_DIR/yay_packages.txt)
     sudo pacman -Rsn $(pacman -Qdtq) --noconfirm
 elif [ $distro_name = 'Fedora' ]; then
     sudo dnf -y update
