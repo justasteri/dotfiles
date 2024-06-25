@@ -10,16 +10,36 @@ FZF_DIR=$HOME/.fzf
 TMUX_PLUGIN_DIR=$HOME/.tmux/plugins/tpm
 YADM_DIR=$HOME/.config/yadm
 
+confirm() {
+    while true; do
+        read -p "$1 (y/n): " yn
+        case $yn in
+            [Yy]* ) return 0;;
+            [Nn]* ) return 1;;
+            * ) echo "Por favor responde y (sí) o n (no).";;
+        esac
+    done
+}
+
+
 ### INSTALACION ###
 
 cd
 if [ $distro_name = 'EndeavourOS' ]; then
-    sudo pacman -Syyu --noconfirm
+    if confirm "¿Quieres actualizar la base de datos de paquetes y el sistema?"; then
+        sudo pacman -Syyu --noconfirm
+    else
+        echo "Saltando la actualización de la base de datos y el sistema."
+    fi
     sudo pacman -S --needed --noconfirm  $(< $YADM_DIR/packages.txt)
     sudo pacman -S --needed --noconfirm  $(< $YADM_DIR/yay_packages.txt)
     sudo pacman -Rsn $(pacman -Qdtq) --noconfirm
 elif [ $distro_name = 'Fedora' ]; then
-    sudo dnf -y update
+    if confirm "¿Quieres actualizar la base de datos de paquetes y el sistema?"; then
+        sudo dnf -y update
+    else
+        echo "Saltando la actualización de la base de datos y el sistema."
+    fi
     sudo dnf install -y $(< packages.txt)
     sudo dnf autoremove -y
 fi
