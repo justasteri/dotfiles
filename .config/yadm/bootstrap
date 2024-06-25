@@ -9,6 +9,7 @@ NVIM_CONFIG=$HOME/.config/nvim
 FZF_DIR=$HOME/.fzf
 TMUX_PLUGIN_DIR=$HOME/.tmux/plugins/tpm
 YADM_DIR=$HOME/.config/yadm
+YADM_ALT_DIR=$YADM_DIR/alt
 
 confirm() {
     while true; do
@@ -31,8 +32,8 @@ if [ $distro_name = 'EndeavourOS' ]; then
     else
         echo "Skipping system update."
     fi
-    sudo pacman -S --needed --noconfirm  $(< $YADM_DIR/packages.txt)
-    yay -S --needed --noconfirm  $(< $YADM_DIR/yay_packages.txt)
+    sudo pacman -S --needed --noconfirm  $(< $YADM_ALT_DIR/packages.txt)
+    yay -S --needed --noconfirm  $(< $YADM_ALT_DIR/yay_packages.txt)
     sudo pacman -Rsn $(pacman -Qdtq) --noconfirm
 elif [ $distro_name = 'Fedora' ]; then
     if confirm "Do you want to update the package database and the system?"; then
@@ -40,7 +41,7 @@ elif [ $distro_name = 'Fedora' ]; then
     else
         echo "Skipping system update."
     fi
-    sudo dnf install -y $(< packages.txt)
+    sudo dnf install -y $(< $YADM_ALT_DIR/packages.txt)
     sudo dnf autoremove -y
 fi
 
