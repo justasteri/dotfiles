@@ -2,3 +2,4 @@ kitty
 flameshot
 mpv
 qutebtowser
+spotify-launcher
