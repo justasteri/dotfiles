@@ -16,38 +16,38 @@ confirm() {
         case $yn in
             [Yy]* ) return 0;;
             [Nn]* ) return 1;;
-            * ) echo "Por favor responde y (sí) o n (no).";;
+            * ) echo "Please answer y (yes) or n (no).";;
         esac
     done
 }
 
 
-### INSTALACION ###
+### INSTALLATION ###
 
 cd
 if [ $distro_name = 'EndeavourOS' ]; then
-    if confirm "¿Quieres actualizar la base de datos de paquetes y el sistema?"; then
+    if confirm "Do you want to update the package database and the system?"; then
         sudo pacman -Syyu --noconfirm
     else
-        echo "Saltando la actualización del sistema."
+        echo "Skipping system update."
     fi
     sudo pacman -S --needed --noconfirm  $(< $YADM_DIR/packages.txt)
     sudo pacman -S --needed --noconfirm  $(< $YADM_DIR/yay_packages.txt)
     sudo pacman -Rsn $(pacman -Qdtq) --noconfirm
 elif [ $distro_name = 'Fedora' ]; then
-    if confirm "¿Quieres actualizar la base de datos de paquetes y el sistema?"; then
+    if confirm "Do you want to update the package database and the system?"; then
         sudo dnf -y update
     else
-        echo "Saltando la actualización del sistema."
+        echo "Skipping system update."
     fi
     sudo dnf install -y $(< packages.txt)
     sudo dnf autoremove -y
 fi
 
-# Actualizar la cache de fuentes
+# Update font cache
 fc-cache
 
-# Notificar al usuario que el script ha finalizado
+# Notify the user that the script has finished
 echo "=== Packages Intallation completed. ==="
 
 ### MANUAL INSTALATIONS ###
