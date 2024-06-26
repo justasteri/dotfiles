@@ -151,4 +151,6 @@ fi
 
 chsh -s $(which zsh)
 
+yadm remote set-url origin "git@github.com:justasteri/dotfiles.git"
+
 echo "=== INSTALLATION COMPLETE ==="
