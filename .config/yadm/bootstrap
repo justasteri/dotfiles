@@ -4,10 +4,7 @@
 # === VARIABLES ===
 # =================
 
-distro_name=$(lsb_release -is)
-
 # Define custom directories
-ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
 NVIM_CONFIG=$HOME/.config/nvim
 FZF_DIR=$HOME/.fzf
 TMUX_PLUGIN_DIR=$HOME/.tmux/plugins/tpm
@@ -30,13 +27,27 @@ confirm() {
     done
 }
 
+# Check if any of the common release files exist and extract the distribution name
+if [ -f /etc/os-release ]; then
+    distro_name=$(grep -oP '(?<=^NAME=").*(?=")' /etc/os-release | awk '{print $1}')
+elif [ -f /etc/lsb-release ]; then
+    distro_name=$(grep DISTRIB_ID /etc/lsb-release | cut -d= -f2)
+elif [ -f /etc/redhat-release ]; then
+    distro_name=$(cat /etc/redhat-release | cut -d' ' -f1)
+elif [ -f /etc/system-release ]; then
+    distro_name=$(cat /etc/system-release | cut -d' ' -f1)
+else
+    echo "Cannot determine the Linux distribution."
+    exit 1
+fi
+
 # ====================
 # === INSTALATIONS ===
 # ====================
 
 cd
-if [ $distro_name = 'EndeavourOS' ]; then
-    if confirm "\n=== Do you want to update the package database and the system? (y,n) ==="; then
+if [[ $distro_name = 'EndeavourOS' || $distro_name = 'Arch' ]]; then
+    if confirm "=== Do you want to update the package database and the system?"; then
         echo "=== Installing Updates ==="
         sudo pacman -Syyu --noconfirm
     else
@@ -46,15 +57,20 @@ if [ $distro_name = 'EndeavourOS' ]; then
     echo "=== Installing Packages ==="
     sudo pacman -S --needed --noconfirm $(< $YADM_ALT_DIR/packages.txt)
     echo "=== Installing OTHER Packages ==="
+    git clone https://aur.archlinux.org/yay.git
+    cd yay
+    makepkg -si
+    cd $HOME
+    rm -rf yay
     yay -S --needed --noconfirm  $(< $YADM_ALT_DIR/yay_packages.txt)
     echo "=== Removing Unused Packages ==="
     sudo pacman -Rsn $(pacman -Qdtq) --noconfirm
-elif [ $distro_name = 'Fedora' ]; then
-    if confirm "Do you want to update the package database and the system?"; then
+elif [[ $distro_name = 'Fedora' ]]; then
+    if confirm "=== Do you want to update the package database and the system?"; then
         echo "=== Installing Updates ==="
         sudo dnf -y update
     else
-        echo "=== Skipping system update ===\n"
+        echo "=== Skipping system update ==="
     fi
 
     echo "=== Installing Packages ==="
@@ -63,18 +79,21 @@ elif [ $distro_name = 'Fedora' ]; then
     sudo dnf autoremove -y
 fi
 
+
 # Update font cache
 fc-cache
 
 # Notify the user that the script has finished
-echo "\n=== Packages Intallation completed ===\n"
+echo "=== Packages Intallation completed ==="
 
 # ===========================
 # === MANUAL INSTALATIONS ===
 # ===========================
 
-if confirm "\n=== Do you want to install manual packages? (y,n) ==="; then
+if confirm "=== Do you want to install manual packages?"; then
     echo "### Starting manual installations ###"
+    
+    google-chrome-stable
 
     echo "=== Installing Github CLI ==="
     gh auth login
@@ -130,4 +149,6 @@ else
     echo "=== Skipping manual installation ===\n"
 fi
 
-echo "\n=============================\n=== INSTALLATION COMPLETE ===\n=============================\n"
+chsh -s $(which zsh)
+
+echo "=== INSTALLATION COMPLETE ==="

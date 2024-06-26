@@ -1,32 +1,19 @@
-# Catppuccin
-## GRUB
-1. Clone this repository locally and enter the cloned folder:
+# Exercism Command-line Interface (CLI)
 
-    ```shell
-    git clone https://github.com/catppuccin/grub.git && cd grub
-    ```
+[![CI](https://github.com/exercism/cli/actions/workflows/ci.yml/badge.svg)](https://github.com/exercism/cli/actions/workflows/ci.yml)
+[![Go Report Card](https://goreportcard.com/badge/github.com/exercism/cli)](https://goreportcard.com/report/github.com/exercism/cli)
 
-2. Copy all or selected theme from `src` folder to
-`/usr/share/grub/themes/`. E.g. to copy all themes use:
+The CLI is the link between the [Exercism][exercism] website and your local work environment. It lets you download exercises and submit your solution to the site.
 
-    ```shell
-    sudo cp -r src/* /usr/share/grub/themes/
-    ```
+This CLI ships as a binary with no additional runtime requirements.
 
-3. Uncomment and edit following line in `/etc/default/grub` to your selected
-   theme:
+## Installing the CLI
 
-    ```shell
-    GRUB_THEME="/usr/share/grub/themes/catppuccin-<flavor>-grub-theme/theme.txt"
-    ```
+Instructions can be found at [exercism/cli/releases](https://github.com/exercism/cli/releases)
 
-4. Update grub:
+## Contributing
 
-    ```shell
-    sudo grub-mkconfig -o /boot/grub/grub.cfg
-    ```
+If you wish to help improve the CLI, please see the [Contributing guide][contributing].
 
-    For Fedora:
-
-    ```shell
-    sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+[exercism]: http://exercism.io
+[contributing]: /CONTRIBUTING.md
