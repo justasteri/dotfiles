@@ -17,28 +17,28 @@ YADM_ALT_DIR=$YADM_DIR/alt
 # =================
 
 confirm() {
-    while true; do
-        read -p "$1 (y/n): " yn
-        case $yn in
-            [Yy]* ) return 0;;
-            [Nn]* ) return 1;;
-            * ) echo "Please answer y (yes) or n (no).";;
-        esac
-    done
+	while true; do
+		read -p "$1 (y/n): " yn
+		case $yn in
+		[Yy]*) return 0 ;;
+		[Nn]*) return 1 ;;
+		*) echo "Please answer y (yes) or n (no)." ;;
+		esac
+	done
 }
 
 # Check if any of the common release files exist and extract the distribution name
 if [ -f /etc/os-release ]; then
-    distro_name=$(grep -oP '(?<=^NAME=").*(?=")' /etc/os-release | awk '{print $1}')
+	distro_name=$(grep -oP '(?<=^NAME=").*(?=")' /etc/os-release | awk '{print $1}')
 elif [ -f /etc/lsb-release ]; then
-    distro_name=$(grep DISTRIB_ID /etc/lsb-release | cut -d= -f2)
+	distro_name=$(grep DISTRIB_ID /etc/lsb-release | cut -d= -f2)
 elif [ -f /etc/redhat-release ]; then
-    distro_name=$(cat /etc/redhat-release | cut -d' ' -f1)
+	distro_name=$(cat /etc/redhat-release | cut -d' ' -f1)
 elif [ -f /etc/system-release ]; then
-    distro_name=$(cat /etc/system-release | cut -d' ' -f1)
+	distro_name=$(cat /etc/system-release | cut -d' ' -f1)
 else
-    echo "Cannot determine the Linux distribution."
-    exit 1
+	echo "Cannot determine the Linux distribution."
+	exit 1
 fi
 
 # ====================
@@ -47,38 +47,37 @@ fi
 
 cd
 if [[ $distro_name = 'EndeavourOS' || $distro_name = 'Arch' ]]; then
-    if confirm "=== Do you want to update the package database and the system?"; then
-        echo "=== Installing Updates ==="
-        sudo pacman -Syyu --noconfirm
-    else
-        echo "=== Skipping system update ===\n"
-    fi
+	if confirm "=== Do you want to update the package database and the system?"; then
+		echo "=== Installing Updates ==="
+		sudo pacman -Syyu --noconfirm
+	else
+		echo "=== Skipping system update ===\n"
+	fi
 
-    echo "=== Installing Packages ==="
-    sudo pacman -S --needed --noconfirm $(< $YADM_ALT_DIR/packages.txt)
-    echo "=== Installing OTHER Packages ==="
-    git clone https://aur.archlinux.org/yay.git
-    cd yay
-    makepkg -si
-    cd $HOME
-    rm -rf yay
-    yay -S --needed --noconfirm  $(< $YADM_ALT_DIR/yay_packages.txt)
-    echo "=== Removing Unused Packages ==="
-    sudo pacman -Rsn $(pacman -Qdtq) --noconfirm
+	echo "=== Installing Packages ==="
+	sudo pacman -S --needed --noconfirm $(<$YADM_ALT_DIR/packages.txt)
+	echo "=== Installing OTHER Packages ==="
+	git clone https://aur.archlinux.org/yay.git
+	cd yay
+	makepkg -si
+	cd $HOME
+	rm -rf yay
+	yay -S --needed --noconfirm $(<$YADM_ALT_DIR/yay_packages.txt)
+	echo "=== Removing Unused Packages ==="
+	sudo pacman -Rsn $(pacman -Qdtq) --noconfirm
 elif [[ $distro_name = 'Fedora' ]]; then
-    if confirm "=== Do you want to update the package database and the system?"; then
-        echo "=== Installing Updates ==="
-        sudo dnf -y update
-    else
-        echo "=== Skipping system update ==="
-    fi
+	if confirm "=== Do you want to update the package database and the system?"; then
+		echo "=== Installing Updates ==="
+		sudo dnf -y update
+	else
+		echo "=== Skipping system update ==="
+	fi
 
-    echo "=== Installing Packages ==="
-    sudo dnf install -y $(< $YADM_ALT_DIR/packages.txt)
-    echo "=== Removing Unused Packages ==="
-    sudo dnf autoremove -y
+	echo "=== Installing Packages ==="
+	sudo dnf install -y $(<$YADM_ALT_DIR/packages.txt)
+	echo "=== Removing Unused Packages ==="
+	sudo dnf autoremove -y
 fi
-
 
 # Update font cache
 fc-cache
@@ -91,72 +90,75 @@ echo "=== Packages Intallation completed ==="
 # ===========================
 
 if confirm "=== Do you want to install manual packages?"; then
-    echo "### Starting manual installations ###"
-    
-    google-chrome-stable
+	echo "### Starting manual installations ###"
 
-    echo "=== Installing Github CLI ==="
-    gh auth login
-    gh auth setup-git
+	google-chrome-stable
 
-    echo "Installing OhMyZsh & plugins"
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-    sudo git clone https://github.com/jeffreytse/zsh-vi-mode $ZSH_CUSTOM/plugins/zsh-vi-mode
-    git clone https://github.com/Aloxaf/fzf-tab ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fzf-tab
-    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-    git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
-    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-     git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
+	echo "=== Installing Github CLI ==="
+	gh auth login
+	gh auth setup-git
 
-    # FZF
-    #if [ ! -d "$FZF_DIR" ]; then
-        #echo "=== Installing FZF ==="
-        #git clone --depth 1 https://github.com/junegunn/fzf.git $FZF_DIR
-        #$FZF_DIR/install --all
-    #fi
+	echo "Installing OhMyZsh & plugins"
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+	sudo git clone https://github.com/jeffreytse/zsh-vi-mode $ZSH_CUSTOM/plugins/zsh-vi-mode
+	git clone https://github.com/Aloxaf/fzf-tab ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fzf-tab
+	git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+	git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
+	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+	git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
 
-    # NVM
-    if [ ! -d "$HOME/.nvm" ]; then
-        echo "=== Installing NVM ==="
-        curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | sh
-    fi
+	# FZF
+	#if [ ! -d "$FZF_DIR" ]; then
+	#echo "=== Installing FZF ==="
+	#git clone --depth 1 https://github.com/junegunn/fzf.git $FZF_DIR
+	#$FZF_DIR/install --all
+	#fi
 
-    # lazyvim
-    if [ ! -d "$NVIM_CONFIG" ]; then
-        echo "=== Installing lazyvim ==="
-        git clone https://github.com/LazyVim/starter $NVIM_CONFIG
-        rm -rf ~/.config/nvim/.git
-    fi
+	# NVM
+	if [ ! -d "$HOME/.nvm" ]; then
+		echo "=== Installing NVM ==="
+		curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | sh
+	fi
 
-    # TMUX plugins
-    if [ ! -d "$TMUX_PLUGIN_DIR" ]; then
-        echo "=== Installing TMUX plugins ==="
-        git clone https://github.com/tmux-plugins/tpm $TMUX_PLUGIN_DIR
-    fi
+	# lazyvim
+	if [ ! -d "$NVIM_CONFIG" ]; then
+		echo "=== Installing lazyvim ==="
+		git clone https://github.com/LazyVim/starter $NVIM_CONFIG
+		rm -rf ~/.config/nvim/.git
+	fi
 
-    # Miniconda
-    if [ ! -d "$MINICONDA_DIR" ]; then
-        echo "=== Installing Miniconda ==="
-        mkdir -p $MINICONDA_DIR
-        wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O $MINICONDA_DIR/miniconda.sh
-        bash $MINICONDA_DIR/miniconda.sh -b -u -p $MINICONDA_DIR
-        rm -rf $MINICONDA_DIR/miniconda.sh
-    fi
+	# TMUX plugins
+	if [ ! -d "$TMUX_PLUGIN_DIR" ]; then
+		echo "=== Installing TMUX plugins ==="
+		git clone https://github.com/tmux-plugins/tpm $TMUX_PLUGIN_DIR
+	fi
 
-    # Exercism
-    echo "=== Installing Exercism ==="
-    wget https://github.com/exercism/cli/releases/download/v3.4.0/exercism-3.4.0-linux-x86_64.tar.gz
-    tar -xf exercism-3.4.0-linux-x86_64.tar.gz
-    mkdir -p ~/bin
-    mv exercism ~/bin
-    ~/bin/exercism
-    echo 'export PATH=~/bin:$PATH' >> ~/.bash_profile
-    source ~/.bash_profile
-    cd $HOME
-    rm -rf exercism-3.4.0-linux-x86_64.tar.gz shell LICENSE
+	# Miniconda
+	if [ ! -d "$MINICONDA_DIR" ]; then
+		echo "=== Installing Miniconda ==="
+		mkdir -p $MINICONDA_DIR
+		wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O $MINICONDA_DIR/miniconda.sh
+		bash $MINICONDA_DIR/miniconda.sh -b -u -p $MINICONDA_DIR
+		rm -rf $MINICONDA_DIR/miniconda.sh
+	fi
+
+	# Exercism
+	echo "=== Installing Exercism ==="
+	wget https://github.com/exercism/cli/releases/download/v3.4.0/exercism-3.4.0-linux-x86_64.tar.gz
+	tar -xf exercism-3.4.0-linux-x86_64.tar.gz
+	mkdir -p ~/bin
+	mv exercism ~/bin
+	~/bin/exercism
+	echo 'export PATH=~/bin:$PATH' >>~/.bash_profile
+	source ~/.bash_profile
+	cd $HOME
+	rm -rf exercism-3.4.0-linux-x86_64.tar.gz shell LICENSE
 else
-    echo "=== Skipping manual installation ===\n"
+	echo "=== Skipping manual installation ===\n"
 fi
+
+# Rebuild bat cache to load catppuccin theme
+bat cache --build
 
 # Make ZSH default shell
 chsh -s $(which zsh)
@@ -166,6 +168,6 @@ yadm remote set-url origin "git@github.com:justasteri/dotfiles.git"
 
 # Remove omz default config file
 rm -f $HOME/.zshrc
-#mv $HOME/.zshrc 
+#mv $HOME/.zshrc
 
 echo "=== INSTALLATION COMPLETE ==="
