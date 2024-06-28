@@ -100,13 +100,12 @@ if confirm "=== Do you want to install manual packages?"; then
     gh auth setup-git
 
     echo "Installing OhMyZsh & plugins"
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-    git clone https://github.com/jeffreytse/zsh-vi-mode $ZSH_CUSTOM/plugins/zsh-vi-mode
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+    sudo git clone https://github.com/jeffreytse/zsh-vi-mode $ZSH_CUSTOM/plugins/zsh-vi-mode
     git clone https://github.com/Aloxaf/fzf-tab ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fzf-tab
     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
     git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-    git clone "https://github.com/MichaelAquilina/zsh-autoswitch-virtualenv.git" "$ZSH_CUSTOM/plugins/autoswitch_virtualenv"
      git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
 
     # FZF
@@ -154,13 +153,19 @@ if confirm "=== Do you want to install manual packages?"; then
     echo 'export PATH=~/bin:$PATH' >> ~/.bash_profile
     source ~/.bash_profile
     cd $HOME
-    rm -rf exercism-3.4.0-linux-x86_64.tar.gz
+    rm -rf exercism-3.4.0-linux-x86_64.tar.gz shell LICENSE
 else
     echo "=== Skipping manual installation ===\n"
 fi
 
+# Make ZSH default shell
 chsh -s $(which zsh)
 
+# Change remote url for yadm repo
 yadm remote set-url origin "git@github.com:justasteri/dotfiles.git"
+
+# Remove omz default config file
+rm -f $HOME/.zshrc
+#mv $HOME/.zshrc 
 
 echo "=== INSTALLATION COMPLETE ==="
