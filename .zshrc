@@ -17,7 +17,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting zsh-completions zsh-autosuggestions fzf-tab zsh-vi-mode z sudo archlinux command-not-found )
+plugins=(git zsh-syntax-highlighting zsh-completions zsh-autosuggestions fzf-tab zsh-vi-mode z sudo archlinux command-not-found zsh-history-substring-search web-search copyfile autoswitch_virtualenv)
 
 source $ZSH/oh-my-zsh.sh
 
