@@ -26,6 +26,7 @@ source $ZSH/oh-my-zsh.sh
 # ===========================
 COMPLETION_WAITING_DOTS="true"
 export PATH=~/bin:$PATH
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 # === Alias ===
 alias c="clear"
