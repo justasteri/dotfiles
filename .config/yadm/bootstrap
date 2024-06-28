@@ -6,7 +6,7 @@
 
 # Define custom directories
 NVIM_CONFIG=$HOME/.config/nvim
-FZF_DIR=$HOME/.fzf
+#FZF_DIR=$HOME/.fzf
 TMUX_PLUGIN_DIR=$HOME/.tmux/plugins/tpm
 MINICONDA_DIR=$HOME/miniconda3
 YADM_DIR=$HOME/.config/yadm
@@ -110,11 +110,11 @@ if confirm "=== Do you want to install manual packages?"; then
      git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
 
     # FZF
-    if [ ! -d "$FZF_DIR" ]; then
-        echo "=== Installing FZF ==="
-        git clone --depth 1 https://github.com/junegunn/fzf.git $FZF_DIR
-        $FZF_DIR/install --all
-    fi
+    #if [ ! -d "$FZF_DIR" ]; then
+        #echo "=== Installing FZF ==="
+        #git clone --depth 1 https://github.com/junegunn/fzf.git $FZF_DIR
+        #$FZF_DIR/install --all
+    #fi
 
     # NVM
     if [ ! -d "$HOME/.nvm" ]; then
