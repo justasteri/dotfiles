@@ -20,3 +20,4 @@ flameshot
 mpv
 qutebrowser
 spotify-launcher
+gtk-engine-murrine
