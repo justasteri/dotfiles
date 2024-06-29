@@ -9,16 +9,11 @@ unzip
 git
 patch
 bat
-bottom
 ripgrep
 gnome-keyring
 sd
-lazygit
-github-cli
 kitty
 flameshot
 mpv
-spotify-launcher
-gtk-engine-murrine
 rsync
 timeshift
