@@ -35,7 +35,6 @@ cd
 if confirm "=== Do you want to update the package database and the system?"; then
 	echo "=== Installing Updates ==="
 	sudo dnf -y update
-	sudo dnf -y upgrade --refresh
 else
 	echo "=== Skipping system update ==="
 fi
@@ -45,7 +44,6 @@ echo "=== Installing Packages ==="
 echo "Installing RPM Fusion"
 sudo dnf install -y  https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 udo dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-sudo dnf groupupdate core
 sudo dnf install -y rpmfusion-free-release-tainted
 sudo dnf install -y dnf-plugins-core
 
@@ -154,5 +152,8 @@ yadm remote set-url origin "git@github.com:justasteri/dotfiles.git"
 
 # Update font cache
 fc-cache
+
+sudo dnf -y upgrade --refresh
+sudo dnf groupupdate core
 
 echo "=== INSTALLATION COMPLETE ==="
