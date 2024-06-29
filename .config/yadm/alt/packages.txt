@@ -18,7 +18,6 @@ mpv
 rsync
 timeshift
 fedora-workstation-repositories
-lpf-spotify-client
 bottom
 google-chrome-stable
 lazygit
