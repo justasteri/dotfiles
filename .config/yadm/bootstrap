@@ -33,20 +33,28 @@ confirm() {
 
 cd
 if confirm "=== Do you want to update the package database and the system?"; then
-	sudo dnf install -y  https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
-	sudo dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-
 	echo "=== Installing Updates ==="
 	sudo dnf -y update
 	sudo dnf -y upgrade --refresh
-	sudo dnf groupupdate core
-	sudo dnf install -y rpmfusion-free-release-tainted
-	sudo dnf install -y dnf-plugins-core
 else
 	echo "=== Skipping system update ==="
 fi
 
 echo "=== Installing Packages ==="
+
+echo "Installing RPM Fusion"
+sudo dnf install -y  https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+udo dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf -y upgrade --refresh
+sudo dnf groupupdate core
+sudo dnf install -y rpmfusion-free-release-tainted
+sudo dnf install -y dnf-plugins-core
+
+echo "Adding packages into dnf"
+sudo dnf config-manager --set-enabled google-chrome
+udo dnf copr enable atim/bottom -y
+sudo dnf copr enable atim/lazygit -y
+
 sudo dnf install -y $(<$YADM_ALT_DIR/packages.txt)
 echo "=== Removing Unused Packages ==="
 sudo dnf autoremove -y
@@ -72,6 +80,10 @@ if confirm "=== Do you want to install manual packages?"; then
 	google-chrome-stable
 
 	echo "=== Installing Github CLI ==="
+	sudo dnf install 'dnf-command(config-manager)'
+	sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
+	sudo dnf install gh --repo gh-cli
+	
 	gh auth login
 	gh auth setup-git
 
@@ -97,20 +109,17 @@ if confirm "=== Do you want to install manual packages?"; then
 		curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | sh
 	fi
 
-	# lazyvim
 	if [ ! -d "$NVIM_CONFIG" ]; then
 		echo "=== Installing lazyvim ==="
 		git clone https://github.com/LazyVim/starter $NVIM_CONFIG
 		rm -rf ~/.config/nvim/.git
 	fi
 
-	# TMUX plugins
 	if [ ! -d "$TMUX_PLUGIN_DIR" ]; then
 		echo "=== Installing TMUX plugins ==="
 		git clone https://github.com/tmux-plugins/tpm $TMUX_PLUGIN_DIR
 	fi
 
-	# Miniconda
 	if [ ! -d "$MINICONDA_DIR" ]; then
 		echo "=== Installing Miniconda ==="
 		mkdir -p $MINICONDA_DIR
@@ -119,7 +128,6 @@ if confirm "=== Do you want to install manual packages?"; then
 		rm -rf $MINICONDA_DIR/miniconda.sh
 	fi
 
-	# Exercism
 	echo "=== Installing Exercism ==="
 	wget https://github.com/exercism/cli/releases/download/v3.4.0/exercism-3.4.0-linux-x86_64.tar.gz
 	tar -xf exercism-3.4.0-linux-x86_64.tar.gz
@@ -145,6 +153,5 @@ yadm remote set-url origin "git@github.com:justasteri/dotfiles.git"
 
 # Remove omz default config file
 rm -f $HOME/.zshrc
-#mv $HOME/.zshrc
 
 echo "=== INSTALLATION COMPLETE ==="
