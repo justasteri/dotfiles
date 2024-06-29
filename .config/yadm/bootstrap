@@ -83,7 +83,7 @@ if confirm "=== Do you want to install manual packages?"; then
 	sudo dnf install 'dnf-command(config-manager)'
 	sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
 	sudo dnf install gh --repo gh-cli
-	
+
 	gh auth login
 	gh auth setup-git
 
@@ -129,15 +129,13 @@ if confirm "=== Do you want to install manual packages?"; then
 	fi
 
 	echo "=== Installing Exercism ==="
+	cd $HOME/Downloads
 	wget https://github.com/exercism/cli/releases/download/v3.4.0/exercism-3.4.0-linux-x86_64.tar.gz
 	tar -xf exercism-3.4.0-linux-x86_64.tar.gz
 	mkdir -p ~/bin
 	mv exercism ~/bin
 	~/bin/exercism
-	echo 'export PATH=~/bin:$PATH' >>~/.bash_profile
-	source ~/.bash_profile
 	cd $HOME
-	rm -rf exercism-3.4.0-linux-x86_64.tar.gz shell LICENSE
 else
 	echo "=== Skipping manual installation ===\n"
 fi
@@ -150,8 +148,5 @@ chsh -s $(which zsh)
 
 # Change remote url for yadm repo
 yadm remote set-url origin "git@github.com:justasteri/dotfiles.git"
-
-# Remove omz default config file
-rm -f $HOME/.zshrc
 
 echo "=== INSTALLATION COMPLETE ==="
