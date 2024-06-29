@@ -55,7 +55,7 @@ echo 'deltarpm=true' | sudo tee -a /etc/dnf/dnf.conf
 
 echo "Adding packages into dnf"
 sudo dnf config-manager --set-enabled google-chrome
-udo dnf copr enable atim/bottom -y
+sudo dnf copr enable atim/bottom -y
 sudo dnf copr enable atim/lazygit -y
 
 sudo dnf install -y $(<$YADM_ALT_DIR/packages.txt)
