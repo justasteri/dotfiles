@@ -50,6 +50,12 @@ sudo dnf groupupdate core
 sudo dnf install -y rpmfusion-free-release-tainted
 sudo dnf install -y dnf-plugins-core
 
+# Speed up dnf
+echo "Speeding up dnf"
+echo 'fastestmirror=1' | sudo tee -a /etc/dnf/dnf.conf
+echo 'max_parallel_downloads=10' | sudo tee -a /etc/dnf/dnf.conf
+echo 'deltarpm=true' | sudo tee -a /etc/dnf/dnf.conf
+
 echo "Adding packages into dnf"
 sudo dnf config-manager --set-enabled google-chrome
 udo dnf copr enable atim/bottom -y
@@ -58,14 +64,6 @@ sudo dnf copr enable atim/lazygit -y
 sudo dnf install -y $(<$YADM_ALT_DIR/packages.txt)
 echo "=== Removing Unused Packages ==="
 sudo dnf autoremove -y
-
-# Update font cache
-fc-cache
-
-# Speed up dnf
-echo 'fastestmirror=1' | sudo tee -a /etc/dnf/dnf.conf
-echo 'max_parallel_downloads=10' | sudo tee -a /etc/dnf/dnf.conf
-echo 'deltarpm=true' | sudo tee -a /etc/dnf/dnf.conf
 
 # Notify the user that the script has finished
 echo "=== Packages Intallation completed ==="
@@ -148,5 +146,8 @@ chsh -s $(which zsh)
 
 # Change remote url for yadm repo
 yadm remote set-url origin "git@github.com:justasteri/dotfiles.git"
+
+# Update font cache
+fc-cache
 
 echo "=== INSTALLATION COMPLETE ==="
