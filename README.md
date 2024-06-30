@@ -1,5 +1,11 @@
 # Dotfiles Config
 
+## packages
+gnome-tweaks
+gnome-extensions-app
+hyprland
+wayland-devel wayland-protocols-devel hyprlang-devel pango-devel cairo-devel file-devel libglvnd-devel libglvnd-core-devel libjpeg-turbo-devel libwebp-devel gcc-c++
+
 ## Manual Configs
 - Catppuccin GRUB theme
 - catppuccin theme gtk
