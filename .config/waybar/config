@@ -5,8 +5,8 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["custom/music"],
-    "modules-right": ["pulseaudio", "backlight", "battery", "clock", "tray", "cpu", "custom/lock", "custom/power"],
-    "wlr/workspaces": {
+    "modules-right": ["pulseaudio", "backlight", "battery", "clock", "tray", "cpu", "memory", "custom/lock", "custom/power"],
+    "hyprland/workspaces": {
          "disable-scroll": true,
          "sort-by-name": true,
          "format": " {icon} ",
@@ -20,9 +20,14 @@
     },
     "cpu": {
       "interval": 10,
-      "format": "{}% ",
+      "format": "   {}% ",
       "max-length": 10
     },
+    "memory": {
+    "interval": 10,
+    "format": "  {}% ",
+    "max-length": 10
+},
     "custom/music": {
         "format": "  {}",
         "escape": true,
