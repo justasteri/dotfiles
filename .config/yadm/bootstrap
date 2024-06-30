@@ -6,7 +6,7 @@
 
 # Define custom directories
 NVIM_CONFIG=$HOME/.config/nvim
-#FZF_DIR=$HOME/.fzf
+FZF_DIR=$HOME/.fzf
 TMUX_PLUGIN_DIR=$HOME/.tmux/plugins/tpm
 MINICONDA_DIR=$HOME/miniconda3
 YADM_DIR=$HOME/.config/yadm
@@ -84,19 +84,11 @@ if confirm "=== Do you want to install manual packages?"; then
 
 	echo "Installing OhMyZsh & plugins"
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-	sudo git clone https://github.com/jeffreytse/zsh-vi-mode $ZSH_CUSTOM/plugins/zsh-vi-mode
 	git clone https://github.com/Aloxaf/fzf-tab ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fzf-tab
 	git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 	git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
 	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 	git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
-
-	# FZF
-	#if [ ! -d "$FZF_DIR" ]; then
-	#echo "=== Installing FZF ==="
-	#git clone --depth 1 https://github.com/junegunn/fzf.git $FZF_DIR
-	#$FZF_DIR/install --all
-	#fi
 
 	# NVM
 	if [ ! -d "$HOME/.nvm" ]; then
@@ -155,5 +147,13 @@ fc-cache
 
 sudo dnf -y upgrade --refresh
 sudo dnf groupupdate core
+
+zsh
+
+if [ ! -d "$FZF_DIR" ]; then
+	echo "=== Installing FZF ==="
+	git clone --depth 1 https://github.com/junegunn/fzf.git $FZF_DIR
+	$FZF_DIR/install --all
+fi
 
 echo "=== INSTALLATION COMPLETE ==="
