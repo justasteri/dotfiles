@@ -31,39 +31,24 @@ confirm() {
 # === INSTALATIONS ===
 # ====================
 
-cd
 if confirm "=== Do you want to update the package database and the system?"; then
 	echo "=== Installing Updates ==="
-	sudo dnf -y update
+	sudo pacman -Syyu --noconfirm
 else
-	echo "=== Skipping system update ==="
+	echo "=== Skipping system update ===\n"
 fi
 
 echo "=== Installing Packages ==="
-
-echo "Installing RPM Fusion"
-sudo dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
-sudo dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-sudo dnf install -y rpmfusion-free-release-tainted
-sudo dnf install -y dnf-plugins-core
-
-# Speed up dnf
-echo "Speeding up dnf"
-echo 'fastestmirror=1' | sudo tee -a /etc/dnf/dnf.conf
-echo 'max_parallel_downloads=10' | sudo tee -a /etc/dnf/dnf.conf
-echo 'deltarpm=true' | sudo tee -a /etc/dnf/dnf.conf
-
-echo "Adding packages into dnf"
-sudo dnf config-manager --set-enabled google-chrome
-sudo dnf copr enable atim/bottom -y
-sudo dnf copr enable atim/lazygit -y
-
-sudo dnf install -y $(<$YADM_ALT_DIR/packages.txt)
+sudo pacman -S --needed --noconfirm $(<$YADM_ALT_DIR/packages.txt)
+echo "=== Installing OTHER Packages ==="
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+cd $HOME
+rm -rf yay
+yay -S --needed --noconfirm $(<$YADM_ALT_DIR/yay_packages.txt)
 echo "=== Removing Unused Packages ==="
-sudo dnf autoremove -y
-
-# Notify the user that the script has finished
-echo "=== Packages Intallation completed ==="
+sudo pacman -Rsn $(pacman -Qdtq) --noconfirm
 
 # ===========================
 # === MANUAL INSTALATIONS ===
@@ -75,9 +60,6 @@ if confirm "=== Do you want to install manual packages?"; then
 	google-chrome-stable
 
 	echo "=== Installing Github CLI ==="
-	sudo dnf install 'dnf-command(config-manager)'
-	sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
-	sudo dnf install gh --repo gh-cli
 
 	gh auth login
 	gh auth setup-git
@@ -115,12 +97,6 @@ if confirm "=== Do you want to install manual packages?"; then
 		rm -rf $MINICONDA_DIR/miniconda.sh
 	fi
 
-	echo "=== Installing VS Code"
-	sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-	echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo >/dev/null
-	dnf check-update
-	sudo dnf install code
-
 	echo "=== Installing Exercism ==="
 	cd $HOME/Downloads
 	wget https://github.com/exercism/cli/releases/download/v3.4.0/exercism-3.4.0-linux-x86_64.tar.gz
@@ -145,15 +121,14 @@ yadm remote set-url origin "git@github.com:justasteri/dotfiles.git"
 # Update font cache
 fc-cache
 
-sudo dnf -y upgrade --refresh
-sudo dnf groupupdate core
-
 zsh
 
-if [ ! -d "$FZF_DIR" ]; then
-	echo "=== Installing FZF ==="
-	git clone --depth 1 https://github.com/junegunn/fzf.git $FZF_DIR
-	$FZF_DIR/install --all
+if confirm "Do you want to install FZF?"; then
+	if [ ! -d "$FZF_DIR" ]; then
+		echo "=== Installing FZF ==="
+		git clone --depth 1 https://github.com/junegunn/fzf.git $FZF_DIR
+		$FZF_DIR/install --all
+	fi
 fi
 
 echo "=== INSTALLATION COMPLETE ==="

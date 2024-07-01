@@ -10,14 +10,13 @@ git
 patch
 bat
 ripgrep
-gnome-keyring
 sd
 kitty
 flameshot
 mpv
 rsync
 timeshift
-fedora-workstation-repositories
 bottom
-google-chrome-stable
 lazygit
+qutebrowser
+github-cli
