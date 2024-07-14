@@ -1,5 +1,4 @@
 zsh
-ranger
 neovim
 tmux
 lsd
@@ -20,3 +19,14 @@ bottom
 lazygit
 qutebrowser
 github-cli
+yazi
+ffmpegthumbnailer
+unarchiver
+jq
+poppler
+fd
+zoxide
+autocpu-freq
+spotify-launcher
+fastfetch
+spotifyd

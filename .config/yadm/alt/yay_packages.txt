@@ -1,2 +1,4 @@
 google-chrome
 visual-studio-code-bin
+spotify-tui
+cava
