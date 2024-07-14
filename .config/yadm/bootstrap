@@ -41,11 +41,6 @@ fi
 echo "=== Installing Packages ==="
 sudo pacman -S --needed --noconfirm $(<$YADM_ALT_DIR/packages.txt)
 echo "=== Installing OTHER Packages ==="
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
-cd $HOME
-rm -rf yay
 yay -S --needed --noconfirm $(<$YADM_ALT_DIR/yay_packages.txt)
 echo "=== Removing Unused Packages ==="
 sudo pacman -Rsn $(pacman -Qdtq) --noconfirm
