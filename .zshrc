@@ -17,7 +17,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting zsh-completions zsh-autosuggestions fzf-tab vi-mode z sudo command-not-found zsh-history-substring-search web-search copyfile archlinux)
+plugins=(git zsh-syntax-highlighting zsh-completions zsh-autosuggestions fzf-tab vi-mode z sudo command-not-found zsh-history-substring-search web-search copyfile)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -34,7 +34,6 @@ alias grep='grep --color=auto'
 alias cat='bat --style=plain --paging=never'
 alias ls='lsd'
 alias zshconfig="nvim ~/.zshrc"
-alias logout="sudo pkill -u justasteri"
 
 HISTSIZE=5000
 HISTFILE=~/.zsh_history
@@ -82,9 +81,5 @@ unset __conda_setup
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
-# === Themes ===
-## fzf
-export FZF_DEFAULT_OPTS=" \
---color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
---color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
---color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
+#starship
+eval "$(starship init zsh)"
