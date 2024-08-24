@@ -21,7 +21,7 @@ confirm() {
 
 if confirm "=== Do you want to update the package database and the system?"; then
 	echo "=== Installing Updates ==="
-	sudo pacman -Syyu --noconfirm
+	sudo apt-get update && sudo apt-get upgrade
 else
 	echo "=== Skipping system update ===\n"
 fi
@@ -31,7 +31,7 @@ sudo pacman -S --needed --noconfirm $(<$HOME/.config/yadm/alt/packages.txt)
 echo "=== Installing OTHER Packages ==="
 yay -S --needed --noconfirm $(<$HOME/.config/yadm/alt/yay_packages.txt)
 echo "=== Removing Unused Packages ==="
-sudo pacman -Rsn $(pacman -Qdtq) --noconfirm
+sudo apt-get autoremove
 
 # ===========================
 # === MANUAL INSTALATIONS ===
@@ -39,9 +39,6 @@ sudo pacman -Rsn $(pacman -Qdtq) --noconfirm
 
 if confirm "=== Do you want to install manual packages?"; then
 	echo "### Starting manual installations ###"
-
-	google-chrome-stable
-
 	echo "=== Installing Github CLI ==="
 
 	gh auth login
